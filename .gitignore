@@ -2,6 +2,7 @@
 .env.*
 !.env.example
 node_modules/
+.netlify/
 site.zip
 *.log
 .DS_Store

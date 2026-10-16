@@ -30,6 +30,16 @@ Google API references:
 
 Live Google translation cannot be verified until a real key is configured. Provider tests use mocks and incur no API charges.
 
+## Publish on Netlify
+
+Import `Efekoy/Hackathon` from GitHub and select branch `main`. Leave the base directory empty. The tracked `netlify.toml` sets the build command to `npm run build`, publish directory to `public` and functions directory to `netlify/functions`. Publish through the Git integration so Netlify builds the translation function; a static folder drag-and-drop alone does not deploy that function.
+
+The form, English/Polish/Urdu, interest suggestions and results work without an API key. To enable additional Google translations, add `GOOGLE_TRANSLATE_API_KEY` in Netlify environment variables with **Functions** scope, then redeploy. Do not put the key in `netlify.toml` or any public file. The Netlify adapter reuses the tested API and only sends fixed interface text to Google.
+
+After deploying, check `/api/languages`: without a key it returns `{"configured":false,"languages":[]}`. With a working key it returns the supported language list. Verify an additional language from the accessibility menu. The full eight-question demo and results tabs should also work on the deployed URL.
+
+Configuration follows [Netlify's Functions documentation](https://docs.netlify.com/build/functions/configuration/) and [Functions API](https://docs.netlify.com/build/functions/api/).
+
 ## Demonstrate in 60–90 seconds
 
 1. Show **Accessibility & language**. Try the language dropdown, larger text, high contrast and read-aloud controls.
@@ -64,7 +74,7 @@ npm run build
 npm test
 ```
 
-23 automated checks cover translation keys and errors, fixed-public-copy translation, caching, rate limits, request restrictions, eight-question content in each bundled language, choice limits and exclusive options, interest mapping, XP/levels, contextual MBacc links, official-resource ranking, safe profile rendering, speech append/stop behavior and Worker assets.
+25 automated checks cover translation keys and errors, fixed-public-copy translation, caching, rate limits, request restrictions, eight-question content in each bundled language, choice limits and exclusive options, interest mapping, XP/levels, contextual MBacc links, official-resource ranking, safe profile rendering, speech append/stop behavior and Worker assets.
 
 Browser checks cover the complete eight-question journey, all four result views, English/Polish/Urdu, RTL layout, accessibility toggles, microphone consent/cancel, translation setup messaging and edited-profile retention across tabs and languages. Actual microphone transcription across devices, translation quality, screen-reader compatibility and a real Google API call need further testing before a public pilot.
 
