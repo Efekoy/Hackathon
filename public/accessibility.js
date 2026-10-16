@@ -1,96 +1,21 @@
-// Progressive enhancement: translation failure never discards form answers.
-const languageService={configured:false,available:[],status:'loading',request:0};
-state.answerMode='type';
-const extra=()=>t().extra;
-const builtInLanguages=[{language:'en',name:'English'},{language:'pl',name:'Polski'},{language:'ur',name:'اردو'}];
-let microphoneConsent=false;
-function openModal(html, className=''){
- const dialog=$('referralDialog');if(dialog.open)dialog.close();dialog.className=className;dialog.innerHTML=html;
- const heading=dialog.querySelector('h2');if(heading){heading.id='dialogTitle';dialog.setAttribute('aria-labelledby','dialogTitle');}
- dialog.showModal();return dialog;
-}
-function closeModal(){const dialog=$('referralDialog');dialog.close();dialog.innerHTML='';dialog.className='';}
-function updateAccessibility(){
- const e=extra();
- const labels={receiveLabel:e.receiveLabel,answerLabel:e.answerLabel,typeMode:e.type,voiceMode:e.voice,contrastLabel:e.contrast,speedLabel:e.speed,allLanguages:e.allLanguages,accessTag:e.accessTag,sourcesButton:e.sources};
- Object.entries(labels).forEach(([id,value])=>$(id).textContent=value);
- $('typeMode').setAttribute('aria-pressed',String(state.answerMode==='type'));
- $('voiceMode').setAttribute('aria-pressed',String(state.answerMode==='voice'));
- const supported=Boolean(window.SpeechRecognition||window.webkitSpeechRecognition);
- $('inputStatus').textContent=!supported?e.voiceUnsupported:state.answerMode==='voice'?e.voiceSelected:e.inputHint;
- const voices=window.speechSynthesis?.getVoices()||[];
- $('voiceStatus').textContent=voices.length&&!voices.some(v=>v.lang.toLowerCase().startsWith(state.lang.toLowerCase()))?e.voiceUnavailable:e.voiceHint;
- $('translationStatus').textContent=languageService.status==='loading'?e.translating:languageService.status==='error'?e.apiUnavailable:languageService.configured?(translations[state.lang]&&!['en','pl','ur'].includes(state.lang)?e.machine:e.apiReady):e.apiOffline;
- $('translationStatus').className='translation-status '+(languageService.status==='loading'?'loading':languageService.configured?'connected':'');
- const list=[...builtInLanguages];if(!list.some(l=>l.language===state.lang))list.push(languageService.available.find(l=>l.language===state.lang)||{language:state.lang,name:state.lang});
- $('language').innerHTML=list.map(l=>`<option value="${esc(l.language)}" ${state.lang===l.language?'selected':''}>${esc(l.name)}</option>`).join('');
- if($('mic'))$('mic').classList.toggle('preferred-input',state.answerMode==='voice');
-}
+let speaking=false,recognition=null,micConsent=false,voicesReady=false;
+const service={configured:false,languages:[],status:'loading',request:0};
+const languageNames={en:'English',pl:'Polski',ur:'اردو'};
+function updateAccessibility(){const d=u();$('accessTitle').textContent=d.access;$('currentLanguage').textContent=languageNames[state.lang]||service.languages.find(l=>l.language===state.lang)?.name||state.lang;$('accessDescription').textContent=d.settings;$('languageLabel').textContent=d.language;$('readLabel').textContent=d.listen;$('answerLabel').textContent=d.type+' / '+d.voice;$('listenButton').textContent=speaking?'■ '+d.stopReading:'🔊 '+d.listen;$('listenButton').setAttribute('aria-pressed',String(speaking));$('typeMode').textContent=d.type;$('voiceMode').textContent=d.voice;$('typeMode').setAttribute('aria-pressed',String(!state.voice));$('voiceMode').setAttribute('aria-pressed',String(state.voice));$('sizeButton').textContent='A+ '+d.larger;$('contrastButton').textContent='◐ '+d.contrast;$('speedLabel').textContent=d.speed;$('allLanguages').textContent=d.allLanguages+' ↗';const codes=['en','pl','ur'];if(!codes.includes(state.lang))codes.push(state.lang);$('language').innerHTML=codes.map(code=>`<option value="${esc(code)}" ${code===state.lang?'selected':''}>${esc(languageNames[code]||service.languages.find(l=>l.language===code)?.name||code)}</option>`).join('');$('translationStatus').textContent=service.status==='loading'?d.translating:service.status==='error'?d.apiError:service.configured?d.apiReady:d.apiOffline;const voices=window.speechSynthesis?.getVoices()||[];$('voiceStatus').textContent=voices.length&&!voices.some(v=>v.lang.toLowerCase().startsWith(state.lang.toLowerCase()))?d.voiceUnavailable:'';}
 window.updateAccessibility=updateAccessibility;
-async function loadLanguageService(){
- languageService.status='loading';updateAccessibility();
- try{const response=await fetch('/api/languages',{signal:AbortSignal.timeout(16000)});if(!response.ok)throw Error('unavailable');const data=await response.json();languageService.configured=data.configured===true;languageService.available=Array.isArray(data.languages)?data.languages.filter(l=>typeof l.language==='string'&&typeof l.name==='string'):[];languageService.status='ready';}
- catch{languageService.status='error';languageService.configured=false;languageService.available=[];}
- updateAccessibility();
-}
-async function changeLanguage(code){
- if(!code||code===state.lang)return;
- syncExperience();stopAudio();stopRecognition();const previous=state.lang,request=++languageService.request;
- try{
-  if(!translations[code]){
-   languageService.status='loading';updateAccessibility();$('language').disabled=true;
-   const response=await fetch('/api/ui?target='+encodeURIComponent(code),{signal:AbortSignal.timeout(30000)});
-   if(!response.ok)throw Error('translation');const data=await response.json();
-   if(!data.catalogue||!Array.isArray(data.catalogue.opportunities)||!data.catalogue.extra)throw Error('invalid');
-   // Translations are plain text. Strip markup before inserting provider text into templates.
-   const plain=value=>Array.isArray(value)?value.map(plain):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).map(([k,v])=>[k,plain(v)])):typeof value==='string'?value.replace(/[<>]/g,''):value;
-   translations[code]=plain(data.catalogue);
-  }
-  if(request!==languageService.request)return;
-  if(state.example&&state.experience===translations[previous].exampleExperience)state.experience=translations[code].exampleExperience;
-  state.lang=code;state.guideHelp='';languageService.status='ready';render();
-  // Preserve an edited summary. Custom resident text is never sent for translation.
- }catch{if(request===languageService.request){languageService.status='ready';$('language').value=previous;toast(extra().translationFailed);updateAccessibility();}}
- finally{if(request===languageService.request)$('language').disabled=false;}
-}
-function showLanguagePicker(){
- const e=extra();openModal(`<span class="eyebrow">WIGAN CONNECT · TEAM WIGAN</span><h2>${esc(e.languageTitle)}</h2><p>${esc(e.languageIntro)}</p><label class="field-label" for="languageSearch">${esc(e.languageSearch)}</label><input type="text" id="languageSearch" autocomplete="off" placeholder="${esc(e.languageSearch)}"><div class="language-list" id="languageList"></div><p class="language-hint">${esc(languageService.configured?e.machine:e.languageNoApi)}</p><div class="dialog-actions"><button class="secondary" id="retryLanguages">${esc(e.loadLanguages)}</button><button class="primary" id="closeLanguages">${esc(e.close)}</button></div>`,'language-dialog');
- const list=[...builtInLanguages,...languageService.available.filter(l=>!builtInLanguages.some(b=>b.language===l.language))];
- for(const language of list){try{language.nativeName=new Intl.DisplayNames([language.language],{type:'language'}).of(language.language);}catch{language.nativeName=language.name;}}
- function draw(){const search=$('languageSearch').value.toLocaleLowerCase();const filtered=list.filter(l=>(l.name+' '+l.nativeName+' '+l.language).toLocaleLowerCase().includes(search));$('languageList').innerHTML=filtered.length?filtered.map(l=>`<button class="language-item" data-language="${esc(l.language)}" aria-pressed="${l.language===state.lang}"><span>${esc(l.nativeName||l.name)}${l.nativeName&&l.nativeName!==l.name?`<small style="display:block">${esc(l.name)}</small>`:''}</span><small>${esc(l.language)}</small></button>`).join(''):`<p>${esc(e.languageEmpty)}</p>`;document.querySelectorAll('[data-language]').forEach(button=>button.onclick=()=>{const code=button.dataset.language;closeModal();changeLanguage(code);});}
- $('languageSearch').oninput=draw;$('closeLanguages').onclick=closeModal;$('retryLanguages').onclick=async()=>{closeModal();await loadLanguageService();showLanguagePicker();};draw();$('languageSearch').focus();
-}
-function showSources(){const e=extra();openModal(`<span class="eyebrow">TEAM WIGAN · INDEPENDENT PROTOTYPE</span><h2>${esc(e.sources)}</h2><p>${esc(e.sourcesIntro)}</p><p class="source-line">${esc(e.checked)}</p><ul class="source-list">${window.WIGAN_CONTENT.sources.map(s=>`<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${esc(s.name)} ↗</a></li>`).join('')}</ul><p><a href="${window.WIGAN_CONTENT.photo.url}" target="_blank" rel="noopener noreferrer">${esc(e.photoCredit)}</a> <a href="${window.WIGAN_CONTENT.photo.license}" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a></p><p>${esc(t().guideDisclosure)}</p><button class="primary" id="closeSources">${esc(e.close)}</button>`);$('closeSources').onclick=closeModal;}
-showOpportunity=function(i){
- syncExperience();const d=t(),o=d.opportunities[i],source=window.WIGAN_CONTENT.sources[i];
- openModal(`<span class="eyebrow">${esc(d.sample)}</span><h2>${esc(o.title)}</h2><p>${esc(o.description)}</p><ul class="details"><li>⌖ ${esc(o.area)}</li><li>◷ ${esc(o.schedule)}</li><li>◇ ${esc(o.price)}</li><li>♡ ${esc(o.support)}</li></ul><div class="review-note">${esc(d.detailNote)}</div><p class="source-line">${esc(d.extra.source)}: ${esc(source.provider)}</p><div class="dialog-actions"><button class="secondary" id="closeDetails">${esc(d.close)}</button><a class="primary official-link" href="${source.url}" target="_blank" rel="noopener noreferrer">${esc(d.detailAction)}</a></div>`);
- $('closeDetails').onclick=closeModal;
-};
-window.requestDictation=function(){
- if(recording){startDictation();return;}
- if(!(window.SpeechRecognition||window.webkitSpeechRecognition)){toast(t().micUnavailable);return;}
- if(microphoneConsent){startDictation();return;}
- const e=extra();openModal(`<h2>${esc(e.micPrivacyTitle)}</h2><p>${esc(e.micPrivacy)}</p><div class="dialog-actions"><button class="secondary" id="cancelMic">${esc(t().cancel)}</button><button class="primary" id="agreeMic">${esc(e.startMic)}</button></div>`);
- $('cancelMic').onclick=closeModal;$('agreeMic').onclick=()=>{microphoneConsent=true;closeModal();startDictation();};
-};
-window.requestReset=function(){
- if(!state.interests.length&&!state.gateways.length&&!state.stage&&!state.experience&&!state.results){reset();return;}
- syncExperience();const e=extra();openModal(`<h2>${esc(e.resetTitle)}</h2><p>${esc(e.resetText)}</p><div class="dialog-actions"><button class="secondary" id="cancelReset">${esc(t().cancel)}</button><button class="primary" id="confirmReset">${esc(e.resetConfirm)}</button></div>`);$('cancelReset').onclick=closeModal;$('confirmReset').onclick=()=>{closeModal();reset();};
-};
-// Add a real contact format check to the existing consent-based preview.
-const originalReferral=showReferral;
-showReferral=function(title){
- originalReferral(title);const dialog=$('referralDialog');const h=dialog.querySelector('h2');h.id='dialogTitle';dialog.setAttribute('aria-labelledby','dialogTitle');const form=$('referralForm'),submit=form.onsubmit;
- $('refContact').oninput=()=>{$('refContact').setCustomValidity('');$('refContact').removeAttribute('aria-invalid');};
- form.onsubmit=e=>{const value=$('refContact').value.trim();const validEmail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);const validPhone=/^[+\d\s().-]+$/.test(value)&&value.replace(/\D/g,'').length>=7&&value.replace(/\D/g,'').length<=15;if(!validEmail&&!validPhone){e.preventDefault();$('refContact').setCustomValidity(extra().contactError);$('refContact').setAttribute('aria-invalid','true');$('refContact').reportValidity();return;}submit(e);const title=dialog.querySelector('h2');title.id='dialogTitle';title.tabIndex=-1;title.focus();};
-};
-$('language').onchange=e=>changeLanguage(e.target.value);
-$('allLanguages').onclick=showLanguagePicker;
-$('sourcesButton').onclick=showSources;
+function stopAudio(){speaking=false;window.speechSynthesis?.cancel();$('listenButton').setAttribute('aria-pressed','false');$('listenButton').textContent='🔊 '+u().listen;}
+window.stopAudio=stopAudio;
+function speak(){if(speaking){stopAudio();return;}if(!window.speechSynthesis){toast(u().voiceUnavailable);return;}const voices=window.speechSynthesis.getVoices(),voice=voices.find(v=>v.lang.toLowerCase().startsWith(state.lang.toLowerCase()));if(!voice){toast(u().voiceUnavailable);return;}window.stopDictation();let text;if(state.screen==='questions')text=[u().guides[state.step],u().questionTitles[state.step],u().questionDescriptions[state.step],...(u().choices[state.step]||[]),...(state.step===6?[u().days,...u().dayOptions,u().time,...u().timeOptions,u().area,...u().areas]:[])].join('. ');else text=$('app').innerText;const utterance=new SpeechSynthesisUtterance(text);utterance.voice=voice;utterance.lang=voice.lang;utterance.rate=Number($('speechSpeed').value)||.95;utterance.onend=()=>{speaking=false;updateAccessibility();};utterance.onerror=event=>{speaking=false;updateAccessibility();if(!['canceled','interrupted'].includes(event.error))toast(u().voiceUnavailable);};speaking=true;updateAccessibility();window.speechSynthesis.speak(utterance);}
+function stopDictation(){const rec=recognition;recognition=null;if(rec)try{rec.stop();}catch{}if($('mic')){$('mic').classList.remove('recording');$('mic').textContent='🎙️ '+u().speak;}}
+window.stopDictation=stopDictation;
+function beginDictation(){const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;if(!Recognition){toast(u().speechUnavailable);return;}if(recognition){stopDictation();return;}stopAudio();const rec=new Recognition();recognition=rec;const initial=state.answers[5].trim();rec.lang={en:'en-GB',pl:'pl-PL',ur:'ur-PK'}[state.lang]||state.lang;rec.continuous=false;rec.interimResults=true;rec.onstart=()=>{if($('mic')){$('mic').classList.add('recording');$('mic').textContent='■ '+u().stopMic;}toast(u().listening);};rec.onresult=event=>{if(recognition!==rec||state.screen!=='questions'||state.step!==5)return;let words='';for(let i=0;i<event.results.length;i++)words+=event.results[i][0].transcript+' ';state.answers[5]=(initial?initial+' ':'')+words.trim();if($('experience'))$('experience').value=state.answers[5];if($('next'))$('next').disabled=!canContinue();};rec.onerror=()=>toast(u().micError);rec.onend=()=>{if(recognition===rec){recognition=null;if($('mic')){$('mic').classList.remove('recording');$('mic').textContent='🎙️ '+u().speak;}}};try{rec.start();}catch{recognition=null;toast(u().micError);}}
+window.requestDictation=()=>{if(!(window.SpeechRecognition||window.webkitSpeechRecognition)){toast(u().speechUnavailable);return;}if(micConsent||recognition){beginDictation();return;}const d=u();modal(`<h2>${esc(d.micTitle)}</h2><p>${esc(d.micText)}</p><div class="dialog-actions"><button class="outline" id="cancelMic">${esc(d.cancel)}</button><button class="primary" id="agreeMic">${esc(d.micContinue)}</button></div>`);$('cancelMic').onclick=closeModal;$('agreeMic').onclick=()=>{micConsent=true;closeModal();beginDictation();};};
+async function loadLanguages(){service.status='loading';updateAccessibility();try{const response=await fetch('/api/languages',{signal:AbortSignal.timeout(16000)});if(!response.ok)throw Error();const data=await response.json();service.configured=data.configured===true;service.languages=Array.isArray(data.languages)?data.languages.filter(l=>typeof l.language==='string'&&typeof l.name==='string'):[];service.status='ready';}catch{service.status='error';service.configured=false;}updateAccessibility();}
+async function changeLanguage(code){if(code===state.lang)return;saveDraft();stopAudio();stopDictation();const request=++service.request,previous=state.lang;try{if(!translations[code]){service.status='loading';updateAccessibility();$('language').disabled=true;const response=await fetch('/api/ui?target='+encodeURIComponent(code),{signal:AbortSignal.timeout(30000)});if(!response.ok)throw Error();const data=await response.json();if(!data.catalogue?.journey?.questionTitles||data.catalogue.journey.questionTitles.length!==8)throw Error();const plain=v=>typeof v==='string'?v.replace(/[<>]/g,''):Array.isArray(v)?v.map(plain):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,plain(x)])):v;translations[code]=plain(data.catalogue);}if(request!==service.request)return;if(state.example&&state.answers[5]===translations[previous].journey.exampleText)state.answers[5]=translations[code].journey.exampleText;state.lang=code;service.status='ready';render();}catch{if(request===service.request){service.status='ready';toast(u().translationError);updateAccessibility();}}finally{if(request===service.request)$('language').disabled=false;}}
+function languagePicker(){const d=u();modal(`<h2>${esc(d.language)}</h2><label class="field-label" for="languageSearch">${esc(d.languageSearch)}</label><input id="languageSearch" type="search"><div class="language-list" id="languageList"></div><p class="small-note">${esc(service.configured?d.translationNotice:d.apiOffline)}</p><button class="primary" id="closeLanguage">${esc(d.close)}</button>`);const all=[{language:'en',name:'English'},{language:'pl',name:'Polski'},{language:'ur',name:'اردو'},...service.languages.filter(l=>!['en','pl','ur'].includes(l.language))];const draw=()=>{const query=$('languageSearch').value.toLocaleLowerCase();$('languageList').innerHTML=all.filter(l=>(l.name+' '+l.language).toLocaleLowerCase().includes(query)).map(l=>`<button class="outline" data-language="${esc(l.language)}">${esc(l.name)}</button>`).join('');document.querySelectorAll('[data-language]').forEach(button=>button.onclick=()=>{const code=button.dataset.language;closeModal();changeLanguage(code);});};$('languageSearch').oninput=draw;$('closeLanguage').onclick=closeModal;draw();$('languageSearch').focus();}
+$('language').onchange=e=>changeLanguage(e.target.value);$('listenButton').onclick=speak;$('allLanguages').onclick=languagePicker;
+$('sizeButton').onclick=()=>{const active=document.body.classList.toggle('larger');$('sizeButton').setAttribute('aria-pressed',String(active));};
 $('contrastButton').onclick=()=>{const active=document.body.classList.toggle('high-contrast');$('contrastButton').setAttribute('aria-pressed',String(active));};
-$('typeMode').onclick=()=>{state.answerMode='type';stopRecognition();updateAccessibility();};
-$('voiceMode').onclick=()=>{state.answerMode='voice';updateAccessibility();};
-document.querySelector('.brand').onclick=e=>{e.preventDefault();window.requestReset();};
-if(window.speechSynthesis)window.speechSynthesis.addEventListener('voiceschanged',updateAccessibility);
-document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAudio();stopRecognition();}});
-updateAccessibility();loadLanguageService();
+$('typeMode').onclick=()=>{state.voice=false;stopDictation();updateAccessibility();};$('voiceMode').onclick=()=>{state.voice=true;updateAccessibility();if(state.screen==='questions'&&state.step===5)$('mic')?.focus();};
+window.speechSynthesis?.addEventListener('voiceschanged',updateAccessibility);document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAudio();stopDictation();}});window.addEventListener('beforeunload',stopAudio);
+updateAccessibility();loadLanguages();

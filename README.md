@@ -32,13 +32,13 @@ Live Google translation cannot be verified until a real key is configured. Provi
 
 ## Demonstrate in 60–90 seconds
 
-1. Show **Accessibility & language**. Try language selection, larger text and high contrast.
-2. Click **Try example answers**. The same answers work in Form and Guided Conversation modes.
-3. Use **Read this question aloud** and its speed selector. Installed voices depend on device and language; unavailable voices are explained.
-4. Continue to Experience. **Help me describe this** offers a scripted follow-up. **Speak my answer** explains browser speech handling before requesting microphone permission. Typing always works.
-5. Review answers and show three official service suggestions with reasons. Availability and area go into the summary, not a guaranteed match.
-6. Open a result to show its official Wigan or GMACS link, or show a relevant MBacc suggestion on Beeline. Copy or edit the summary.
-7. Optionally create a follow-up **preview** using fictional contact details and consent. Nothing is sent.
+1. Show **Accessibility & language**. Try the language dropdown, larger text, high contrast and read-aloud controls.
+2. Click **Try example answers** to start the eight-question journey with editable sample answers, or **Let’s go** for a blank journey.
+3. Show the emoji choice cards, segmented progress bar, live interest bars, XP and badge notifications. Interests are compared with the strongest signal, not scored for eligibility.
+4. On the experience question, type an example. **Speak my answer** explains browser speech handling before requesting microphone permission. Typing always works.
+5. Complete the journey and show **You**, **Jobs**, **Next steps** and **Help**. Jobs contains official information routes, not live vacancies.
+6. Show the contextual MBacc link for apprenticeship/career-exploration interests, edit/copy the experience profile, or print/save the current results view.
+7. **Start again** asks before clearing the in-memory answers.
 
 ## Sources and attribution
 
@@ -53,9 +53,9 @@ Information checked on **16 October 2026**, paraphrased from:
 - [Official MBacc overview](https://www.greatermanchester-ca.gov.uk/what-we-do/education-work-and-skills/technical-education-city-region/the-greater-manchester-baccalaureate-mbacc/)
 - [Official MBacc Award framework](https://www.greatermanchester-ca.gov.uk/what-we-do/education-work-and-skills/technical-education-city-region/the-greater-manchester-baccalaureate-mbacc/mbacc-award/how-the-award-works/)
 
-Wigan Connect retains its own green-and-white identity. MBacc is a contextual external recommendation, shown for apprenticeship or career exploration interests, rather than a programme banner or required form choice. No partnership or official status is claimed. Beeline describes its intended audience as ages 14–18. The app presents information routes rather than inventing vacancies, session dates or placement offers. Schools, colleges and providers confirm arrangements and age eligibility.
+Wigan Connect uses a teal, lime and yellow interface inspired by the supplied design references. MBacc is a contextual external recommendation, shown for apprenticeship or career exploration interests, rather than a programme banner or required form choice. No partnership or official status is claimed. Beeline describes its intended audience as ages 14–18. The app presents information routes rather than inventing vacancies, session dates or placement offers. Schools, colleges and providers confirm arrangements and age eligibility.
 
-Photo: **Wigan Pier**, Gerald England, 28 September 2017, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Wigan_Pier_(geograph_5676853).jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Original raster unchanged; display cropped with CSS. Attribution is in the Sources dialog.
+Photo: **Wigan Pier**, Gerald England, 28 September 2017, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Wigan_Pier_(geograph_5676853).jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Retained asset from the earlier prototype; the redesigned interface does not display it.
 
 ## Validation
 
@@ -64,9 +64,9 @@ npm run build
 npm test
 ```
 
-19 automated checks cover missing keys, language validation, header-only credentials, public-copy translation, cache/concurrent requests, provider failures, cross-origin/method restrictions, rate limiting, official content, dictation handling, denied/unsupported microphones, late speech results, Worker assets, HEAD requests, safe 404s, work-interest questions in each language, youth-goal ranking, stage/profile summaries and official MBacc links without answer transmission.
+23 automated checks cover translation keys and errors, fixed-public-copy translation, caching, rate limits, request restrictions, eight-question content in each bundled language, choice limits and exclusive options, interest mapping, XP/levels, contextual MBacc links, official-resource ranking, safe profile rendering, speech append/stop behavior and Worker assets.
 
-Browser checks cover English/Polish/Urdu, RTL layout, accessibility toggles, read-aloud start/stop, missing-voice fallback, microphone consent/cancel, form/guide switching, option exclusivity, review, official details, edited-summary preservation/copy, contact validation and referral preview. Actual microphone transcription across devices, translation quality, screen-reader compatibility and a real Google API call need further testing before a public pilot.
+Browser checks cover the complete eight-question journey, all four result views, English/Polish/Urdu, RTL layout, accessibility toggles, microphone consent/cancel, translation setup messaging and edited-profile retention across tabs and languages. Actual microphone transcription across devices, translation quality, screen-reader compatibility and a real Google API call need further testing before a public pilot.
 
 ## Architecture and limits
 

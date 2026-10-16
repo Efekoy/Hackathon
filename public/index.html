@@ -1,32 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#163f38">
-  <meta name="description" content="Wigan Connect: a Team Wigan concept helping young people explore work experience, apprenticeships, careers and community opportunities.">
-  <title>Wigan Connect · Your next move</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="content.js"></script>
-  <script defer src="app.js"></script>
-  <script defer src="accessibility.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#00586f">
+<meta name="description" content="Wigan Connect helps young people explore careers, work experience and community opportunities through eight accessible questions.">
+<title>Wigan Connect · Find your future</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="content.js"></script><script defer src="core.js"></script><script defer src="app.js"></script><script defer src="accessibility.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to questions</a>
-  <header class="site-header"><a class="brand" href="./" aria-label="Wigan Connect home"><span class="brand-mark">w<span>↗</span></span><span class="brand-words"><span>Wigan<span class="brand-light">Connect</span></span><small>A TEAM WIGAN IDEA</small></span></a><div class="header-right"><span class="demo-badge" id="prototypeLabel">TEAM WIGAN CONCEPT</span><button class="text-button" id="demoButton">Try example answers ↗</button></div></header>
-  <section class="access" aria-labelledby="accessTitle">
-    <div class="access-heading"><div class="access-intro"><span class="access-symbol" aria-hidden="true">✳</span><div><h2 id="accessTitle">Accessibility & language</h2><p id="accessSubtitle">Choose how you read, listen and answer. You can change this anytime.</p></div></div><span class="access-available" id="accessTag">MADE TO WORK FOR YOU</span></div>
-    <div class="access-grid">
-      <div class="access-tile"><span class="tile-icon" aria-hidden="true">文</span><div class="tile-content"><label for="language" id="languageLabel">1. Choose your language</label><select id="language"><option value="en">English</option><option value="pl">Polski</option><option value="ur">اردو</option></select><button class="inline-button" id="allLanguages">Browse more languages ↗</button></div></div>
-      <div class="access-tile"><span class="tile-icon" aria-hidden="true">◖</span><div class="tile-content"><strong id="receiveLabel">2. Read or listen</strong><button class="access-button" id="listenButton" aria-pressed="false">◖ Read this question aloud</button><p class="tile-hint" id="voiceStatus">Uses an available voice on your device.</p></div></div>
-      <div class="access-tile"><span class="tile-icon" aria-hidden="true">♩</span><div class="tile-content"><strong id="answerLabel">3. Type or speak</strong><div class="answer-switch"><button id="typeMode" aria-pressed="true">Type answers</button><button id="voiceMode" aria-pressed="false">Speak answers</button></div><p class="tile-hint" id="inputStatus">Your choice. Typed answers always work.</p></div></div>
-    </div>
-    <div class="access-bottom"><div class="access-display"><button class="access-button" id="sizeButton" aria-pressed="false">A+ <span id="sizeLabel">Larger text</span></button><button class="access-button" id="contrastButton" aria-pressed="false">◐ <span id="contrastLabel">High contrast</span></button></div><label class="speed-control"><span id="speedLabel">Reading speed</span><select id="speechSpeed"><option value="0.75">0.75×</option><option value="0.95" selected>1×</option><option value="1.2">1.25×</option></select></label></div>
-    <p class="translation-status" id="translationStatus" role="status">Checking language service…</p>
-  </section>
-  <main id="main" tabindex="-1"><div id="app"></div></main>
-  <footer><span id="footerName">Made for people. Rooted in Wigan.</span><span><button class="inline-button" id="sourcesButton">Sources & about this demo</button><span id="footerNote">Independent prototype · Official service links · No referrals are sent</span></span></footer>
-  <div id="status" class="toast" role="status" aria-live="polite"></div>
-  <dialog id="referralDialog"></dialog>
-  <noscript><p class="no-script">This guided form needs JavaScript. You can also visit <a href="https://www.wigan.gov.uk/Resident/Jobs-Careers/index.aspx">Wigan Council’s jobs, careers and skills directory</a>.</p></noscript>
-</body>
-</html>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="./" aria-label="Wigan Connect home"><span class="brand-mark" aria-hidden="true">w<span>•</span></span><span>Wigan <strong>Connect</strong></span></a><span class="prototype" id="prototypeLabel">PROTOTYPE</span></div></header>
+<div class="access-wrap"><details id="accessPanel"><summary><span aria-hidden="true">🌐</span><strong id="accessTitle">Accessibility & language</strong><span class="access-current" id="currentLanguage">English</span><span aria-hidden="true">⌄</span></summary><div class="access-content"><p id="accessDescription">Choose your language and how to answer.</p><div class="access-grid"><label><span id="languageLabel">Language</span><select id="language"><option value="en">English</option><option value="pl">Polski</option><option value="ur">اردو</option></select></label><div><span class="control-label" id="readLabel">Read or listen</span><button id="listenButton" class="access-button" aria-pressed="false">🔊 Listen</button></div><div><span class="control-label" id="answerLabel">Type or speak</span><div class="input-switch"><button id="typeMode" aria-pressed="true">Type answers</button><button id="voiceMode" aria-pressed="false">Speak answers</button></div></div></div><div class="access-row"><button id="allLanguages" class="text-button">More languages ↗</button><button id="sizeButton" class="access-button" aria-pressed="false">A+ Larger text</button><button id="contrastButton" class="access-button" aria-pressed="false">◐ High contrast</button><label class="speed"><span id="speedLabel">Reading speed</span><select id="speechSpeed"><option value="0.75">0.75×</option><option value="0.95" selected>1×</option><option value="1.2">1.25×</option></select></label></div><p id="translationStatus" class="access-note" role="status"></p><p id="voiceStatus" class="access-note"></p></div></details></div>
+<main id="main" tabindex="-1"><div id="app"></div></main>
+<footer><div class="footer-inner"><p id="privacyNote"></p><div class="footer-bottom"><span id="ownNote"></span><button id="sourcesButton">Sources & about this demo</button></div></div></footer>
+<div id="notifications" class="notifications" aria-live="polite" aria-atomic="false"></div><div id="status" class="status-toast" role="status"></div>
+<dialog id="dialog"></dialog>
+<noscript><p>Enable JavaScript to use the form, or visit <a href="https://www.wigan.gov.uk/Resident/Jobs-Careers/index.aspx">Wigan Council’s jobs and skills information</a>.</p></noscript>
+</body></html>
