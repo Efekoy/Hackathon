@@ -1,4 +1,4 @@
-// Youth-first Team Wigan concept. Official sources checked 16 October 2026.
+// Wigan Connect youth questionnaire. Official sources checked 16 October 2026.
 window.WIGAN_CONTENT = {
   "sources": [
     {
@@ -54,16 +54,16 @@ window.WIGAN_CONTENT = {
       "languageLabel": "1. Choose your language",
       "listen": "Read this question aloud",
       "stop": "Stop reading",
-      "footerNote": "Independent concept linked to MBacc resources · Not an official MBacc service",
+      "footerNote": "Independent prototype · Official service links · No referrals are sent",
       "intro": "Work experience, first jobs and people who can help you get there. Start with what you’re curious about.",
       "sample": "OFFICIAL RESOURCE",
-      "resultsSub": "Youth-focused routes suggested by your goals, with official MBacc, GMACS and Wigan links.",
+      "resultsSub": "Suggestions based on your answers, with links to official local services and careers resources.",
       "resultsNote": "These are official information routes, not live vacancies, guaranteed placements or event bookings. Check age eligibility, dates, access and availability with the provider.",
       "explore": "Explore this route",
       "detailAction": "Open official resource ↗",
       "detailNote": "Checked 16 October 2026. This link is a starting point, not an offer, booking or eligibility decision. A provider or school/college coordinator must confirm age requirements, places and arrangements.",
       "areaHint": "Choose an area, not your home address. Providers will confirm locations; results are not filtered by distance.",
-      "reviewNote": "Your goals suggest useful links. MBacc gateways help you explore careers; this prototype does not award MBacc credit or approve placements. Discuss opportunities with your careers adviser or coordinator.",
+      "reviewNote": "We use your interests to suggest useful links. Your availability and support needs go into your summary for a human conversation. Providers confirm eligibility and arrangements.",
       "supportHint": "Your preferences go into your plan. Ask the provider what support they can offer.",
       "opportunityTypes": [
         "Work experience",
@@ -165,7 +165,7 @@ window.WIGAN_CONTENT = {
         "source": "Official source",
         "checked": "Checked 16 Oct 2026",
         "sources": "Sources & about this demo",
-        "sourcesIntro": "An independent Team Wigan concept connecting young people to official MBacc, GMACS and Wigan resources. No partnership, account connection, placement booking or MBacc Award credit is implied. Check eligibility and current details with providers.",
+        "sourcesIntro": "Wigan Connect is an independent Team Wigan prototype. We suggest official Wigan and GMACS resources based on your answers, and MBacc resources where relevant. Providers confirm current availability and eligibility.",
         "photoCredit": "Photo: Wigan Pier by Gerald England · CC BY-SA 2.0. Display cropped; original image unchanged.",
         "languageTitle": "Find your language",
         "languageSearch": "Search languages",
@@ -197,27 +197,27 @@ window.WIGAN_CONTENT = {
       "eyebrow": "YOUNG PEOPLE. BIG POSSIBILITIES.",
       "headline": "Your future.<br>Your <em>next move.</em>",
       "prototypeLabel": "TEAM WIGAN CONCEPT",
-      "footerName": "MBacc Connect · A Team Wigan idea",
+      "footerName": "Wigan Connect · A Team Wigan idea",
       "steps": [
-        "Your goals",
-        "Your pathway",
+        "Your interests",
+        "About you",
         "Your time",
         "Your support",
-        "Your plan"
+        "Review"
       ],
       "headings": [
-        "What’s your next move?",
-        "What could you see yourself doing?",
-        "Make it fit around your life.",
+        "What would you like help with?",
+        "Tell us a little about yourself.",
+        "What works around your life?",
         "What would help you get started?",
-        "Your next-step plan."
+        "Check what you’ve told us."
       ],
       "subtitles": [
-        "Pick a few things you want to explore. You don’t need it all figured out.",
-        "Explore the seven MBacc career gateways, then tell us a little about yourself.",
-        "Tell us where you are in your journey and when you’re free.",
+        "Choose the opportunities you want to explore.",
+        "Your interests and everyday experience help us suggest useful next steps.",
+        "Tell us your current stage, availability and preferred area.",
         "Choose the support that would give you more confidence.",
-        "Check your interests and experience. It’s your story — you can change it."
+        "Edit anything before we suggest opportunities."
       ],
       "interestNames": [
         "Work experience",
@@ -233,7 +233,7 @@ window.WIGAN_CONTENT = {
         "Take a first step into work",
         "Meet employers and advisers",
         "Build skills and meet people",
-        "Find an MBacc pathway"
+        "Help me work out a direction"
       ],
       "interestHint": "Start with what interests you. These choices are suggestions, not a test or an application.",
       "experienceLabel": "What do you enjoy, or what have you tried?",
@@ -257,11 +257,11 @@ window.WIGAN_CONTENT = {
         "No extra help right now"
       ],
       "guideMessages": [
-        "What would you like to try next — work experience, an apprenticeship, a first job or meeting people at an event? Pick what feels right.",
-        "Which MBacc career gateways sound interesting? You can choose more than one. Then tell me about a hobby, project or something you’ve helped with.",
-        "Are you at school, at college or looking for your next step? Choose times and places that work for you.",
-        "Would help with a CV, travel, language or a careers conversation make the next step easier?",
-        "Here’s your plan so far. You can change anything before exploring the links."
+        "What are you looking for — work experience, a first job, an apprenticeship, an event or a way to get involved locally?",
+        "What do you enjoy? Tell me about a school project, hobby or time you helped someone. You can also choose areas of work you’re curious about.",
+        "Are you at school, at college or looking for your next step? When and where would you like to take part?",
+        "Would help with applications, travel, language or a careers conversation make getting started easier?",
+        "Here’s what you’ve told us. Check it looks right before seeing your next steps."
       ],
       "helpEmpty": "Tell me about a project, hobby, sport or time you helped someone. What did you do and which part did you enjoy?",
       "helpSchool": "That could show teamwork, creativity or organisation. What was your part, and what would you like to try next?",
@@ -277,16 +277,16 @@ window.WIGAN_CONTENT = {
       "referralButton": "Preview a careers conversation",
       "generalRequest": "Help with my next step into work",
       "youth": {
-        "gatewayLabel": "Which MBacc gateways interest you?",
-        "gatewayHint": "Pick any that spark your curiosity. You can explore all seven without choosing a career today.",
+        "gatewayLabel": "What kind of work are you curious about?",
+        "gatewayHint": "Optional — choose any that interest you, or leave this blank.",
         "gatewayNames": [
-          "Construction & the Green Economy",
-          "Creative, Culture & Sport",
-          "Digital & Technology",
-          "Education & Early Years",
-          "Engineering & Manufacturing",
-          "Financial, Business & Professional Services",
-          "Health & Social Care"
+          "Building & the environment",
+          "Creative work & sport",
+          "Technology & digital",
+          "Teaching & childcare",
+          "Engineering & making things",
+          "Business & finance",
+          "Health & helping people"
         ],
         "stageLabel": "Where are you in your journey?",
         "stages": [
@@ -296,19 +296,19 @@ window.WIGAN_CONTENT = {
           "Apprenticeship / training",
           "Looking for my next step"
         ],
-        "gatewaysReview": "Your MBacc interests",
+        "gatewaysReview": "Areas of work you’re curious about",
         "stageReview": "Your current stage",
-        "gatewaySummary": "Career gateways I want to explore: ",
+        "gatewaySummary": "Areas of work I want to explore: ",
         "stageSummary": "My current stage: ",
         "connectionTag": "MBACC × TEAM WIGAN",
         "connectionTitle": "A clearer route from school to work.",
         "connectionText": "Explore work experience, apprenticeships and careers through MBacc gateways — with local opportunities to build your confidence.",
         "connectionLink": "What is MBacc? ↗",
-        "pathwayTitle": "Take your interests further with MBacc.",
-        "pathwayText": "Explore your chosen gateways on Beeline. Your answers stay here — no profile is sent to MBacc or GMACS.",
-        "pathwayDefault": "Not sure which gateway? Explore all seven on Beeline.",
-        "pathwayButton": "Explore Beeline ↗",
-        "profileNote": "This is a personal draft, not an MBacc Award record or a verified qualification."
+        "pathwayTitle": "A resource that could help you explore further.",
+        "pathwayText": "MBacc’s Beeline helps young people explore how subjects and skills connect to careers. It may be useful for the direction you want to explore.",
+        "pathwayDefault": "",
+        "pathwayButton": "Explore MBacc’s Beeline ↗",
+        "profileNote": "Your own draft to use in a careers conversation or future application."
       }
     },
     "pl": {
@@ -316,15 +316,15 @@ window.WIGAN_CONTENT = {
       "accessSubtitle": "Wybierz, jak czytasz, słuchasz i odpowiadasz.",
       "languageLabel": "1. Wybierz język",
       "listen": "Przeczytaj pytanie",
-      "footerNote": "Niezależna koncepcja z linkami MBacc · Nie jest oficjalną usługą MBacc",
+      "footerNote": "Niezależny prototyp · Oficjalne linki · Nic nie jest wysyłane",
       "sample": "OFICJALNE INFORMACJE",
-      "resultsSub": "Ścieżki dla młodych osób z oficjalnymi linkami MBacc, GMACS i Wigan.",
+      "resultsSub": "Sugestie według odpowiedzi z oficjalnymi linkami do lokalnych usług i kariery.",
       "resultsNote": "To oficjalne informacje, nie potwierdzone oferty, miejsca ani rezerwacje. Sprawdź wiek, daty i dostępność.",
       "explore": "Poznaj tę ścieżkę",
       "detailAction": "Oficjalna strona ↗",
       "detailNote": "Sprawdzono 16.10.2026. To informacje, nie oferta ani potwierdzenie kwalifikacji. Warunki uzgodnij z organizatorem lub szkołą.",
       "areaHint": "Wybierz okolicę, nie adres domowy. Wyniki nie są filtrowane według odległości.",
-      "reviewNote": "Cele sugerują linki. Prototyp nie przyznaje punktów MBacc ani nie zatwierdza praktyk. Porozmawiaj z doradcą.",
+      "reviewNote": "Zainteresowania sugerują linki. Dostępność i wsparcie trafiają do podsumowania. Organizator potwierdzi warunki.",
       "supportHint": "Preferencje trafią do planu. Organizator potwierdzi dostępne wsparcie.",
       "opportunityTypes": [
         "Doświadczenie zawodowe",
@@ -426,7 +426,7 @@ window.WIGAN_CONTENT = {
         "source": "Oficjalne źródło",
         "checked": "Sprawdzono 16.10.2026",
         "sources": "Źródła i informacje o demo",
-        "sourcesIntro": "Niezależny pomysł Team Wigan z oficjalnymi linkami MBacc, GMACS i Wigan. Bez partnerstwa, rezerwacji ani punktów MBacc. Sprawdź warunki u organizatora.",
+        "sourcesIntro": "Wigan Connect to niezależny prototyp Team Wigan. Sugerujemy oficjalne źródła Wigan i GMACS oraz MBacc tam, gdzie pasuje. Organizatorzy potwierdzają warunki.",
         "photoCredit": "Zdjęcie: Wigan Pier, Gerald England · CC BY-SA 2.0. Kadr przycięty w widoku.",
         "languageTitle": "Znajdź swój język",
         "languageSearch": "Szukaj języka",
@@ -459,27 +459,27 @@ window.WIGAN_CONTENT = {
       "headline": "Twoja przyszłość.<br><em>Twój kolejny krok.</em>",
       "intro": "Doświadczenie zawodowe, pierwsza praca i ludzie, którzy pomogą Ci zacząć.",
       "prototypeLabel": "KONCEPCJA TEAM WIGAN",
-      "footerName": "MBacc Connect · Pomysł Team Wigan",
+      "footerName": "Wigan Connect · Pomysł Team Wigan",
       "steps": [
-        "Twoje cele",
-        "Twoja ścieżka",
+        "Zainteresowania",
+        "O Tobie",
         "Twój czas",
         "Wsparcie",
-        "Twój plan"
+        "Sprawdź"
       ],
       "headings": [
-        "Jaki będzie Twój następny krok?",
-        "Co chcesz spróbować robić?",
-        "Dopasujmy to do Twojego życia.",
+        "W czym potrzebujesz pomocy?",
+        "Opowiedz trochę o sobie.",
+        "Co pasuje do Twojego życia?",
         "Co pomoże Ci zacząć?",
-        "Twój plan kolejnych kroków."
+        "Sprawdź swoje odpowiedzi."
       ],
       "subtitles": [
-        "Wybierz kilka rzeczy. Nie musisz jeszcze znać wszystkich odpowiedzi.",
-        "Poznaj siedem ścieżek MBacc i opowiedz o sobie.",
-        "Powiedz, na jakim jesteś etapie i kiedy masz czas.",
+        "Wybierz możliwości, które chcesz poznać.",
+        "Zainteresowania i codzienne doświadczenia pomagają zaproponować kolejne kroki.",
+        "Podaj etap, dostępność i okolicę.",
         "Wybierz pomoc, która da Ci więcej pewności.",
-        "Sprawdź zainteresowania i doświadczenie. Możesz je zmienić."
+        "Możesz wszystko zmienić przed zobaczeniem sugestii."
       ],
       "interestNames": [
         "Doświadczenie zawodowe",
@@ -492,10 +492,10 @@ window.WIGAN_CONTENT = {
       "interestDesc": [
         "Wypróbuj zawód",
         "Pracuj i ucz się",
-        "Zrób pierwszy krok",
+        "Pierwszy krok do pracy",
         "Poznaj pracodawców",
         "Zdobądź doświadczenie",
-        "Znajdź ścieżkę MBacc"
+        "Pomóż mi znaleźć kierunek"
       ],
       "interestHint": "To wskazówki, nie test ani podanie o pracę.",
       "experienceLabel": "Co lubisz lub czego już próbowałeś?",
@@ -519,11 +519,11 @@ window.WIGAN_CONTENT = {
         "Bez dodatkowej pomocy"
       ],
       "guideMessages": [
-        "Co chcesz spróbować: doświadczenia zawodowego, nauki zawodu, pierwszej pracy czy wydarzenia?",
-        "Które ścieżki MBacc Cię ciekawią? Wybierz kilka i opowiedz o hobby lub projekcie.",
-        "Jesteś w szkole, college’u czy szukasz następnego kroku? Wybierz czas i miejsce.",
+        "Szukasz doświadczenia, pierwszej pracy, nauki zawodu, wydarzenia lub lokalnych aktywności?",
+        "Co lubisz? Opowiedz o projekcie, hobby lub pomocy komuś. Możesz wybrać ciekawe obszary pracy.",
+        "Jesteś w szkole, college’u czy szukasz kolejnego kroku? Kiedy i gdzie chcesz uczestniczyć?",
         "Czy pomoże CV, dojazd, język lub rozmowa z doradcą?",
-        "Sprawdź swój plan. Wszystko możesz zmienić."
+        "Sprawdź odpowiedzi przed zobaczeniem kolejnych kroków."
       ],
       "helpEmpty": "Opowiedz o projekcie, hobby, sporcie lub pomocy komuś. Co robiłeś?",
       "helpSchool": "To może pokazywać współpracę i kreatywność. Jaka była Twoja rola?",
@@ -539,16 +539,16 @@ window.WIGAN_CONTENT = {
       "referralButton": "Podgląd rozmowy o karierze",
       "generalRequest": "Pomoc w pierwszym kroku do pracy",
       "youth": {
-        "gatewayLabel": "Które ścieżki MBacc Cię ciekawią?",
-        "gatewayHint": "Wybierz dowolne. Nie musisz już decydować o zawodzie.",
+        "gatewayLabel": "Jakie obszary pracy Cię ciekawią?",
+        "gatewayHint": "Opcjonalnie — wybierz dowolne lub pozostaw puste.",
         "gatewayNames": [
-          "Budownictwo i zielona gospodarka",
-          "Kreatywność, kultura i sport",
+          "Budownictwo i środowisko",
+          "Kreatywność i sport",
           "Technologie cyfrowe",
-          "Edukacja i wczesne lata",
-          "Inżynieria i produkcja",
-          "Finanse, biznes i usługi profesjonalne",
-          "Zdrowie i opieka społeczna"
+          "Edukacja i opieka nad dziećmi",
+          "Inżynieria i tworzenie rzeczy",
+          "Biznes i finanse",
+          "Zdrowie i pomaganie ludziom"
         ],
         "stageLabel": "Na jakim jesteś etapie?",
         "stages": [
@@ -558,19 +558,19 @@ window.WIGAN_CONTENT = {
           "Nauka zawodu / szkolenie",
           "Szukam kolejnego kroku"
         ],
-        "gatewaysReview": "Zainteresowania MBacc",
+        "gatewaysReview": "Ciekawe obszary pracy",
         "stageReview": "Obecny etap",
-        "gatewaySummary": "Ścieżki kariery, które chcę poznać: ",
+        "gatewaySummary": "Obszary pracy, które chcę poznać: ",
         "stageSummary": "Mój obecny etap: ",
         "connectionTag": "MBACC × TEAM WIGAN",
         "connectionTitle": "Twój pomysł. Większa ścieżka.",
         "connectionText": "Dostępny formularz pomaga młodym osobom i łączy z oficjalnymi ścieżkami MBacc oraz lokalnymi możliwościami.",
         "connectionLink": "Czym jest MBacc? ↗",
-        "pathwayTitle": "Rozwiń zainteresowania z MBacc.",
-        "pathwayText": "Poznaj wybrane ścieżki w Beeline. Żadne odpowiedzi nie są wysyłane do MBacc ani GMACS.",
-        "pathwayDefault": "Nie wiesz? Poznaj wszystkie ścieżki w Beeline.",
-        "pathwayButton": "Poznaj Beeline ↗",
-        "profileNote": "To osobisty szkic, nie zapis nagrody MBacc ani potwierdzona kwalifikacja."
+        "pathwayTitle": "Przydatne źródło do dalszego odkrywania.",
+        "pathwayText": "Beeline w MBacc pomaga młodym osobom połączyć przedmioty i umiejętności z karierą. Może pomóc poznać Twój kierunek.",
+        "pathwayDefault": "",
+        "pathwayButton": "Poznaj Beeline MBacc ↗",
+        "profileNote": "Twój szkic do rozmowy o karierze lub przyszłego zgłoszenia."
       }
     },
     "ur": {
@@ -578,15 +578,15 @@ window.WIGAN_CONTENT = {
       "accessSubtitle": "پڑھنے، سننے اور جواب دینے کا طریقہ منتخب کریں۔",
       "languageLabel": "۱۔ اپنی زبان منتخب کریں",
       "listen": "سوال سنیں",
-      "footerNote": "آزاد تصور جو MBacc کے ذرائع سے جوڑتا ہے · سرکاری MBacc سروس نہیں",
+      "footerNote": "آزاد نمونہ · سرکاری روابط · کچھ نہیں بھیجا جاتا",
       "sample": "سرکاری معلومات",
-      "resultsSub": "نوجوانوں کے لیے MBacc، GMACS اور وگن کے سرکاری روابط۔",
+      "resultsSub": "جوابات کے مطابق مقامی خدمات اور کیریئر کے سرکاری روابط۔",
       "resultsNote": "یہ سرکاری معلوماتی راستے ہیں، یقینی آسامیاں یا بکنگ نہیں۔ عمر، تاریخ، رسائی اور دستیابی معلوم کریں۔",
       "explore": "راستہ دیکھیں",
       "detailAction": "سرکاری معلومات کھولیں ↗",
       "detailNote": "۱۶ اکتوبر ۲۰۲۶ کو دیکھا گیا۔ یہ معلومات ہیں، پیشکش یا بکنگ نہیں۔ عمر اور انتظامات فراہم کنندہ یا اسکول سے پوچھیں۔",
       "areaHint": "علاقہ منتخب کریں، گھر کا پتہ نہیں۔ نتائج فاصلے کے مطابق نہیں چھانٹے جاتے۔",
-      "reviewNote": "مقاصد مفید روابط تجویز کرتے ہیں۔ یہ نمونہ MBacc کریڈٹ یا پلیسمنٹ منظور نہیں کرتا۔ کیریئر مشیر سے بات کریں۔",
+      "reviewNote": "دلچسپیاں روابط تجویز کرتی ہیں۔ وقت اور مدد خلاصے میں شامل ہیں۔ اہلیت فراہم کنندہ طے کرے گا۔",
       "supportHint": "ترجیحات منصوبے میں شامل ہوں گی۔ دستیاب مدد فراہم کنندہ سے پوچھیں۔",
       "opportunityTypes": [
         "کام کا تجربہ",
@@ -688,7 +688,7 @@ window.WIGAN_CONTENT = {
         "source": "سرکاری ذریعہ",
         "checked": "۱۶ اکتوبر ۲۰۲۶ کو دیکھا",
         "sources": "ذرائع اور نمونے کے بارے میں",
-        "sourcesIntro": "Team Wigan کا آزاد خیال جو MBacc، GMACS اور وگن کے سرکاری روابط دیتا ہے۔ شراکت، بکنگ یا MBacc کریڈٹ کا دعویٰ نہیں۔",
+        "sourcesIntro": "Wigan Connect، Team Wigan کا آزاد نمونہ ہے۔ جوابات کے مطابق Wigan اور GMACS، اور جہاں مناسب ہو MBacc کے ذرائع تجویز کرتے ہیں۔",
         "photoCredit": "تصویر: Wigan Pier، Gerald England · CC BY-SA 2.0۔ منظر میں تراشی گئی ہے۔",
         "languageTitle": "اپنی زبان تلاش کریں",
         "languageSearch": "زبان تلاش کریں",
@@ -721,27 +721,27 @@ window.WIGAN_CONTENT = {
       "headline": "آپ کا مستقبل۔<br><em>آپ کا اگلا قدم۔</em>",
       "intro": "کام کا تجربہ، پہلی ملازمت اور آگے بڑھنے میں مدد۔ اپنی دلچسپی سے شروع کریں۔",
       "prototypeLabel": "TEAM WIGAN کا تصور",
-      "footerName": "MBacc Connect · Team Wigan کا خیال",
+      "footerName": "Wigan Connect · Team Wigan کا خیال",
       "steps": [
-        "مقاصد",
-        "کیریئر کا راستہ",
+        "دلچسپیاں",
+        "آپ کے بارے میں",
         "آپ کا وقت",
         "مدد",
-        "آپ کا منصوبہ"
+        "جائزہ"
       ],
       "headings": [
-        "آپ کا اگلا قدم کیا ہے؟",
-        "آپ کیا کرنا آزمانا چاہیں گے؟",
-        "اپنی زندگی کے مطابق۔",
+        "آپ کو کس چیز میں مدد چاہیے؟",
+        "اپنے بارے میں کچھ بتائیں۔",
+        "آپ کی زندگی کے مطابق کیا ہے؟",
         "آغاز میں کیا مدد چاہیے؟",
-        "آپ کے اگلے قدم کا منصوبہ۔"
+        "اپنے جوابات چیک کریں۔"
       ],
       "subtitles": [
-        "چند دلچسپ چیزیں منتخب کریں۔ ابھی سب جاننا ضروری نہیں۔",
-        "MBacc کے سات کیریئر راستے دیکھیں اور اپنے بارے میں بتائیں۔",
-        "اپنا تعلیمی مرحلہ اور دستیابی بتائیں۔",
+        "وہ مواقع منتخب کریں جو آپ جاننا چاہتے ہیں۔",
+        "دلچسپیاں اور روزمرہ تجربہ مناسب اگلا قدم بتانے میں مدد دیتے ہیں۔",
+        "اپنا مرحلہ، وقت اور علاقہ بتائیں۔",
         "وہ مدد منتخب کریں جو اعتماد بڑھائے۔",
-        "دلچسپیاں اور تجربہ چیک کریں۔ آپ تبدیل کر سکتے ہیں۔"
+        "تجاویز سے پہلے معلومات بدل سکتے ہیں۔"
       ],
       "interestNames": [
         "کام کا تجربہ",
@@ -757,7 +757,7 @@ window.WIGAN_CONTENT = {
         "کام کا پہلا قدم",
         "آجروں سے ملیں",
         "مہارتیں اور تعلقات",
-        "MBacc راستہ تلاش کریں"
+        "اپنا راستہ جاننے میں مدد"
       ],
       "interestHint": "یہ تجاویز ہیں، امتحان یا ملازمت کی درخواست نہیں۔",
       "experienceLabel": "آپ کو کیا پسند ہے یا کیا آزمایا ہے؟",
@@ -781,11 +781,11 @@ window.WIGAN_CONTENT = {
         "مزید مدد نہیں"
       ],
       "guideMessages": [
-        "کام کا تجربہ، اپرنٹس شپ، پہلی ملازمت یا تقریب؟ جو مناسب لگے منتخب کریں۔",
-        "MBacc کے کون سے راستے دلچسپ ہیں؟ پھر شوق یا منصوبے کے بارے میں بتائیں۔",
-        "آپ اسکول، کالج یا اگلا قدم تلاش کر رہے ہیں؟ وقت اور جگہ منتخب کریں۔",
-        "سی وی، سفر، زبان یا کیریئر گفتگو میں مدد چاہیے؟",
-        "منصوبہ چیک کریں۔ آپ سب کچھ بدل سکتے ہیں۔"
+        "کام کا تجربہ، پہلی ملازمت، اپرنٹس شپ، تقریب یا مقامی سرگرمی؟",
+        "آپ کو کیا پسند ہے؟ منصوبے، شوق یا کسی کی مدد کے بارے میں بتائیں۔ کام کے دلچسپ شعبے بھی منتخب کر سکتے ہیں۔",
+        "آپ اسکول، کالج یا اگلا قدم تلاش کر رہے ہیں؟ کب اور کہاں حصہ لینا چاہیں گے؟",
+        "درخواست، سفر، زبان یا کیریئر گفتگو میں مدد چاہیے؟",
+        "اگلے قدم سے پہلے اپنے جوابات چیک کریں۔"
       ],
       "helpEmpty": "کسی منصوبے، شوق، کھیل یا مدد کے بارے میں بتائیں۔ آپ نے کیا کیا؟",
       "helpSchool": "یہ ٹیم ورک یا تخلیقی صلاحیت دکھا سکتا ہے۔ آپ کا کردار کیا تھا؟",
@@ -801,16 +801,16 @@ window.WIGAN_CONTENT = {
       "referralButton": "کیریئر گفتگو کا پیش منظر",
       "generalRequest": "کام کی طرف پہلے قدم میں مدد",
       "youth": {
-        "gatewayLabel": "MBacc کے کون سے راستے دلچسپ ہیں؟",
-        "gatewayHint": "کوئی بھی منتخب کریں۔ آج ہی کیریئر طے کرنا ضروری نہیں۔",
+        "gatewayLabel": "کام کے کون سے شعبے دلچسپ ہیں؟",
+        "gatewayHint": "اختیاری — کوئی بھی منتخب کریں یا خالی چھوڑ دیں۔",
         "gatewayNames": [
-          "تعمیرات اور سبز معیشت",
-          "تخلیق، ثقافت اور کھیل",
-          "ڈیجیٹل اور ٹیکنالوجی",
-          "تعلیم اور ابتدائی بچپن",
-          "انجینئرنگ اور مینوفیکچرنگ",
-          "مالیات، کاروبار اور پیشہ ورانہ خدمات",
-          "صحت اور سماجی نگہداشت"
+          "تعمیرات اور ماحول",
+          "تخلیقی کام اور کھیل",
+          "ٹیکنالوجی اور ڈیجیٹل",
+          "تعلیم اور بچوں کی دیکھ بھال",
+          "انجینئرنگ اور چیزیں بنانا",
+          "کاروبار اور مالیات",
+          "صحت اور لوگوں کی مدد"
         ],
         "stageLabel": "آپ کس مرحلے پر ہیں؟",
         "stages": [
@@ -820,19 +820,19 @@ window.WIGAN_CONTENT = {
           "اپرنٹس شپ / تربیت",
           "اگلا قدم تلاش کر رہا ہوں"
         ],
-        "gatewaysReview": "MBacc کی دلچسپیاں",
+        "gatewaysReview": "کام کے دلچسپ شعبے",
         "stageReview": "موجودہ مرحلہ",
-        "gatewaySummary": "کیریئر راستے جو میں جاننا چاہتا ہوں: ",
+        "gatewaySummary": "کام کے شعبے جو میں جاننا چاہتا ہوں: ",
         "stageSummary": "میرا موجودہ مرحلہ: ",
         "connectionTag": "MBACC × TEAM WIGAN",
         "connectionTitle": "آپ کا خیال۔ ایک بڑے راستے سے جڑا ہوا۔",
         "connectionText": "قابلِ رسائی فارم نوجوانوں کو MBacc کے سرکاری راستوں اور مقامی مواقع سے جوڑتا ہے۔",
         "connectionLink": "MBacc کیا ہے؟ ↗",
-        "pathwayTitle": "MBacc کے ساتھ دلچسپی آگے بڑھائیں۔",
-        "pathwayText": "Beeline پر منتخب راستے دیکھیں۔ جوابات یہاں رہتے ہیں، MBacc یا GMACS کو نہیں بھیجے جاتے۔",
-        "pathwayDefault": "یقین نہیں؟ Beeline پر تمام راستے دیکھیں۔",
-        "pathwayButton": "Beeline دیکھیں ↗",
-        "profileNote": "یہ ذاتی مسودہ ہے، MBacc ایوارڈ کا ریکارڈ یا تصدیق شدہ قابلیت نہیں۔"
+        "pathwayTitle": "مزید جاننے کے لیے ایک مفید ذریعہ۔",
+        "pathwayText": "MBacc کا Beeline نوجوانوں کو مضامین اور مہارتیں کیریئر سے جوڑنے میں مدد دیتا ہے۔ یہ آپ کے پسندیدہ راستے کے لیے مفید ہو سکتا ہے۔",
+        "pathwayDefault": "",
+        "pathwayButton": "MBacc کا Beeline دیکھیں ↗",
+        "profileNote": "کیریئر گفتگو یا آئندہ درخواست کے لیے آپ کا ذاتی مسودہ۔"
       }
     }
   },

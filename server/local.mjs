@@ -19,4 +19,4 @@ const server=createServer(async(req,res)=>{
   const bytes=await readFile(file);res.writeHead(200,{'Content-Type':mime[extname(file)]||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(req.method==='HEAD'?undefined:bytes);
  }catch{res.writeHead(404);res.end('Not found');}
 });
-server.listen(Number(process.env.PORT||4173),'0.0.0.0',()=>console.log('MBacc Connect: http://localhost:'+Number(process.env.PORT||4173)));
+server.listen(Number(process.env.PORT||4173),'0.0.0.0',()=>console.log('Wigan Connect: http://localhost:'+Number(process.env.PORT||4173)));
