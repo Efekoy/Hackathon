@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const content=await readFile(new URL('../public/content.js',import.meta.url),'utf8');
+const source=await readFile(new URL('../public/app.js',import.meta.url),'utf8');
+function context(){const c={window:{}};vm.createContext(c);vm.runInContext(content+'\n'+source.slice(0,source.indexOf("$('listenButton').onclick")),c);return c;}
+const result=(c,expression)=>JSON.parse(vm.runInContext('JSON.stringify('+expression+')',c));
+test('all bundled languages offer youth goals and the seven official gateways',()=>{const c=context();for(const code of ['en','pl','ur']){const d=result(c,`translations.${code}`);assert.equal(d.interestNames.length,6);assert.equal(d.youth.gatewayNames.length,7);assert.equal(d.youth.stages.length,5);assert.equal(d.opportunities.length,6);assert.equal(d.opportunities[5].type,5);}const english=result(c,'translations.en');assert.ok(!JSON.stringify(english.opportunities).includes('Adult Learning'));assert.match(english.footerNote,/Not an official MBacc service/);});
+test('each practical youth goal prioritises the corresponding official route',()=>{const c=context();for(let goal=0;goal<5;goal++){vm.runInContext(`state.interests=[${goal}]`,c);assert.equal(result(c,'rankedOpportunities()[0].i'),goal);}vm.runInContext('state.interests=[5]',c);assert.ok(result(c,'rankedOpportunities().map(r=>r.i)').includes(5));});
+test('selected career gateways and education stage are included in the profile',()=>{const c=context();vm.runInContext("state.interests=[0];state.gateways=[2,4];state.stage=1;state.experience='I built a school website.'",c);const summary=vm.runInContext('buildSummary()',c);assert.match(summary,/Digital & Technology/);assert.match(summary,/Engineering & Manufacturing/);assert.match(summary,/School \/ GCSEs/);assert.match(summary,/I built a school website/);});
+test('MBacc pathway links use official destinations without passing resident answers',()=>{const c=context();vm.runInContext("state.gateways=[2];state.experience='private fictional answer'",c);const html=vm.runInContext('renderPathwayPlan()',c);assert.match(html,/https:\/\/gmacs.co.uk\/beeline\/digital-and-technology\//);assert.ok(!html.includes('private fictional answer'));assert.match(html,/no profile is sent/);const sources=result(c,'window.WIGAN_CONTENT.sources');assert.ok(sources.every(s=>/^https:\/\/(?:www\.)?(wigan\.gov\.uk|gmacs\.co\.uk|greatermanchester-ca\.gov\.uk)\//.test(s.url)));});

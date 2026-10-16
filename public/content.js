@@ -1,48 +1,876 @@
-// Official service information checked 16 October 2026. No vacancy, session date or eligibility is inferred.
+// Youth-first Team Wigan concept. Official sources checked 16 October 2026.
 window.WIGAN_CONTENT = {
-  sources: [
-    {name:'TechMates · Digital Wigan',url:'https://www.wigan.gov.uk/Council/Digital-Wigan/TechMates.aspx'},
-    {name:'Work experience and volunteering',url:'https://www.wigan.gov.uk/Resident/Jobs-Careers/Work-experience/Index.aspx'},
-    {name:'Jobs, careers and skills',url:'https://www.wigan.gov.uk/Resident/Jobs-Careers/index.aspx'},
-    {name:'Apply for ESOL in Wigan',url:'https://forms.wigan.gov.uk/xfp/form/779'},
-    {name:'About Adult Learning',url:'https://www.wigan.gov.uk/Resident/Jobs-Careers/Adult-Learning/About-Adult-Learning.aspx'},
-    {name:'Employment and Skills Strategy · official report',url:'https://www.wigan.gov.uk/Docs/PDF/Resident/Jobs-Careers/Employability-and-skills-strategy.pdf'}
-  ],
-  photo:{url:'https://commons.wikimedia.org/wiki/File:Wigan_Pier_(geograph_5676853).jpg',author:'Gerald England',license:'https://creativecommons.org/licenses/by-sa/2.0/'},
-  overrides:{
-    en:{
-      accessTitle:'Accessibility & language',accessSubtitle:'Choose how you read, listen and answer. Change this anytime.',languageLabel:'1. Choose your language',listen:'Read this question aloud',stop:'Stop reading',footerNote:'Independent prototype · Official service links · No referrals are sent',
-      intro:'Local support. New skills. A place to start. Find a next step that feels right for you.',sample:'OFFICIAL COUNCIL SOURCE',resultsSub:'Suggested by your interests, with links to official Wigan Council information.',resultsNote:'These are service directories, not confirmed vacancies or booked sessions. Ask providers about eligibility, location, cost, access and availability.',explore:'View service details',detailAction:'Visit official service ↗',detailNote:'Source checked 16 October 2026. This is a signposting tool, not a booking or eligibility decision. Confirm current details directly with the provider.',areaHint:'Choose an area, not your home address. Providers will confirm locations; results are not filtered by distance.',reviewNote:'Suggestions use your selected interests. Availability, location and requested support are included in your summary for a human discussion; they do not filter or guarantee a service match.',supportHint:'We include these preferences in your summary. A provider must confirm what support is available.',
-      opportunityTypes:['Digital support','Volunteering directory','Employment directory','English language learning','Adult learning'],
-      opportunities:[
-        {title:'TechMates digital support',type:0,icon:'⌨',area:'Wigan borough',schedule:'Tea Parties and one-to-one options',price:'Check current details with Digital Wigan',support:'Ask about individual digital support',description:'Digital Wigan offers friendly help with devices and online services through TechMate Tea Parties and one-to-one support.',reason:'You selected digital confidence or learning new skills.',generic:'Explore support for everyday technology.'},
-        {title:'Find local volunteering',type:1,icon:'♡',area:'Wigan borough',schedule:'Availability varies by opportunity',price:'Check each role’s terms',support:'Ask the organiser about support',description:'Wigan Council signposts community volunteering and work-experience opportunities. Explore the options and check each role’s requirements.',reason:'You selected volunteering or meeting your community.',generic:'Explore ways to connect and contribute locally.'},
-        {title:'Jobs, careers & skills',type:2,icon:'↗',area:'Wigan and Greater Manchester',schedule:'Check current vacancies and services',price:'Terms depend on the opportunity',support:'Application-help links in the directory',description:'The council’s directory links to job searches, apprenticeships, careers support and learning. Follow the official links to explore current options.',reason:'You selected finding work.',generic:'Explore official routes to work and skills.'},
-        {title:'English for everyday life · ESOL',type:3,icon:'☏',area:'Wigan',schedule:'Assessment arranged by the provider',price:'Ask the provider about eligibility and fees',support:'English-language course assessment',description:'Wigan Council has an ESOL enquiry form. The provider uses the submitted details to contact applicants about an assessment.',reason:'You selected practising English.',generic:'Explore the council’s English-language learning route.'},
-        {title:'Wigan Adult Learning & Skills',type:4,icon:'✧',area:'Venues across Wigan borough',schedule:'Check the current course timetable',price:'Free courses subject to eligibility',support:'Discuss your learning needs with the team',description:'The service offers English, maths, digital and vocational learning. The council states its courses are for residents aged 19 and over, subject to eligibility.',reason:'You selected learning new skills or community connections.',generic:'Explore learning and skills in your community.'}
-      ],
-      extra:{receiveLabel:'2. Read or listen',answerLabel:'3. Type or speak',type:'Type answers',voice:'Speak answers',voiceHint:'Available voices depend on your device and language.',inputHint:'Your choice. Typed answers always work.',voiceSelected:'On the experience question, use the microphone button. Check the words before continuing.',contrast:'High contrast',speed:'Reading speed',allLanguages:'Browse more languages ↗',accessTag:'MADE TO WORK FOR YOU',photoTitle:'Rooted in Wigan.',photoCaption:'Real places. Local possibilities.',photoAlt:'Wigan Pier and a narrowboat on the Leeds and Liverpool Canal',source:'Official source',checked:'Checked 16 Oct 2026',sources:'Sources & about this demo',sourcesIntro:'This independent Team Wigan prototype is not an official council service. Service descriptions are paraphrased from the council’s pages below; availability must be confirmed with providers.',photoCredit:'Photo: Wigan Pier by Gerald England · CC BY-SA 2.0. Display cropped; original image unchanged.',languageTitle:'Find your language',languageSearch:'Search languages',languageIntro:'Choose a language below. More supported languages appear when the live translation service is connected.',apiOffline:'Live translation is not configured. English, Polish and Urdu remain available.',apiUnavailable:'Language service unavailable. Built-in languages still work. Try again later.',apiReady:'Live translation is connected. Translations by Google. More supported languages are available.',machine:'Machine translation — check important details with the provider.',translating:'Translating the interface…',translationFailed:'Translation could not finish. Your previous language and answers have been kept.',loadLanguages:'Retry language service',languageEmpty:'No languages match your search.',languageNoApi:'More languages are not available yet. English, Polish and Urdu work now.',languageAvailable:'Available',micPrivacyTitle:'Before using your microphone',micPrivacy:'Your browser may send audio to its speech-recognition service. Only use the microphone if you are comfortable with this. You can always type instead.',startMic:'Continue to microphone',contactError:'Enter a valid email address or a phone number with 7–15 digits.',resetTitle:'Start a fresh conversation?',resetText:'This will clear your current answers and summary in this tab.',resetConfirm:'Clear answers',close:'Close',answerNotice:'Your typed answers stay in their original language. Changing the interface does not translate them.',voiceUnsupported:'Voice input is unavailable in this browser. Please use typing.',voiceUnavailable:'No matching voice is installed. Reading is still available.',voiceReady:'Read the current question aloud in the selected language.',focusGuide:'You can switch between the form and guide without losing answers.'}
+  "sources": [
+    {
+      "name": "Wigan Council · Work experience",
+      "provider": "Wigan Council",
+      "url": "https://www.wigan.gov.uk/Resident/Jobs-Careers/Work-experience/Work-experience-at-Wigan-Council.aspx"
     },
-    pl:{
-      accessTitle:'Dostępność i język',accessSubtitle:'Wybierz, jak czytasz, słuchasz i odpowiadasz.',languageLabel:'1. Wybierz język',listen:'Przeczytaj pytanie',footerNote:'Niezależny prototyp · Oficjalne linki · Nic nie jest wysyłane',sample:'OFICJALNE ŹRÓDŁO RADY',resultsSub:'Sugestie według zainteresowań z oficjalnymi informacjami Wigan Council.',resultsNote:'To katalogi usług, nie potwierdzone oferty ani rezerwacje. Potwierdź warunki, miejsce, koszty i dostępność.',explore:'Szczegóły usługi',detailAction:'Oficjalna strona ↗',detailNote:'Źródło sprawdzono 16 października 2026. Potwierdź szczegóły u organizatora.',areaHint:'Wybierz okolicę, nie adres domowy. Wyniki nie są filtrowane według odległości.',reviewNote:'Sugestie opierają się na zainteresowaniach. Czas, okolica i wsparcie trafiają do podsumowania i nie gwarantują dopasowania.',supportHint:'Preferencje będą w podsumowaniu. Organizator musi potwierdzić dostępne wsparcie.',opportunityTypes:['Wsparcie cyfrowe','Wolontariat','Praca i kariera','Nauka angielskiego','Edukacja dorosłych'],
-      opportunities:[
-        {title:'Wsparcie cyfrowe TechMates',type:0,icon:'⌨',area:'Gmina Wigan',schedule:'Spotkania i wsparcie indywidualne',price:'Sprawdź szczegóły w Digital Wigan',support:'Zapytaj o wsparcie indywidualne',description:'Digital Wigan oferuje pomoc z urządzeniami i usługami online podczas spotkań TechMates i indywidualnie.',reason:'Wybrano umiejętności cyfrowe lub nowe umiejętności.',generic:'Poznaj pomoc w codziennym używaniu technologii.'},
-        {title:'Znajdź lokalny wolontariat',type:1,icon:'♡',area:'Gmina Wigan',schedule:'Dostępność zależy od roli',price:'Sprawdź warunki każdej roli',support:'Zapytaj organizatora o wsparcie',description:'Wigan Council wskazuje możliwości wolontariatu i doświadczenia zawodowego. Sprawdź wymagania wybranej roli.',reason:'Wybrano wolontariat lub społeczność.',generic:'Poznaj sposoby pomagania lokalnie.'},
-        {title:'Praca, kariera i umiejętności',type:2,icon:'↗',area:'Wigan i Greater Manchester',schedule:'Sprawdź aktualne oferty i usługi',price:'Warunki zależą od możliwości',support:'Linki do pomocy w aplikowaniu',description:'Katalog rady zawiera linki do ofert pracy, praktyk, wsparcia kariery i nauki.',reason:'Wybrano szukanie pracy.',generic:'Poznaj oficjalne ścieżki do pracy.'},
-        {title:'Angielski na co dzień · ESOL',type:3,icon:'☏',area:'Wigan',schedule:'Ocena poziomu przez organizatora',price:'Zapytaj o opłaty i kwalifikację',support:'Ocena poziomu angielskiego',description:'Formularz ESOL Wigan Council umożliwia kontakt w sprawie oceny poziomu przed kursem.',reason:'Wybrano ćwiczenie angielskiego.',generic:'Poznaj ścieżkę nauki angielskiego.'},
-        {title:'Edukacja dorosłych w Wigan',type:4,icon:'✧',area:'Miejsca w gminie Wigan',schedule:'Sprawdź aktualny harmonogram',price:'Bezpłatne kursy zależnie od kwalifikacji',support:'Omów potrzeby z zespołem',description:'Kursy angielskiego, matematyki, cyfrowe i zawodowe. Według rady dla mieszkańców od 19 lat, zależnie od warunków.',reason:'Wybrano nowe umiejętności lub społeczność.',generic:'Poznaj naukę i umiejętności lokalnie.'}
-      ],
-      extra:{receiveLabel:'2. Czytaj lub słuchaj',answerLabel:'3. Pisz lub mów',type:'Wpisuj odpowiedzi',voice:'Mów odpowiedzi',voiceHint:'Głosy zależą od urządzenia i języka.',inputHint:'Wpisywanie zawsze działa.',voiceSelected:'Przy pytaniu o doświadczenie użyj mikrofonu. Sprawdź zapis.',contrast:'Wysoki kontrast',speed:'Tempo czytania',allLanguages:'Więcej języków ↗',accessTag:'DOPASUJ DO SIEBIE',photoTitle:'Blisko Wigan.',photoCaption:'Prawdziwe miejsca. Lokalne możliwości.',photoAlt:'Wigan Pier i łódź na kanale',source:'Oficjalne źródło',checked:'Sprawdzono 16.10.2026',sources:'Źródła i informacje o demo',sourcesIntro:'Niezależny prototyp Team Wigan, nie oficjalna usługa rady. Opisy na podstawie poniższych stron. Potwierdź dostępność u organizatorów.',photoCredit:'Zdjęcie: Wigan Pier, Gerald England · CC BY-SA 2.0. Kadr przycięty w widoku.',languageTitle:'Znajdź swój język',languageSearch:'Szukaj języka',languageIntro:'Angielski, polski i urdu są dostępne lokalnie. Inne języki wymagają połączenia z Google Cloud Translation.',apiOffline:'Tłumaczenie online nie jest skonfigurowane. Angielski, polski i urdu działają.',apiUnavailable:'Usługa językowa jest niedostępna. Wbudowane języki działają.',apiReady:'Tłumaczenie online jest połączone. Dostępne są inne obsługiwane języki.',machine:'Tłumaczenie maszynowe — potwierdź ważne informacje.',translating:'Tłumaczenie interfejsu…',translationFailed:'Nie udało się przetłumaczyć. Zachowano język i odpowiedzi.',loadLanguages:'Spróbuj ponownie',languageEmpty:'Brak pasujących języków.',languageNoApi:'Inne języki nie są jeszcze dostępne. Angielski, polski i urdu działają.',languageAvailable:'Dostępny',micPrivacyTitle:'Przed użyciem mikrofonu',micPrivacy:'Przeglądarka może wysyłać dźwięk do swojej usługi rozpoznawania mowy. Zawsze możesz pisać.',startMic:'Przejdź do mikrofonu',contactError:'Podaj poprawny e-mail lub numer telefonu z 7–15 cyframi.',resetTitle:'Zacząć nową rozmowę?',resetText:'Spowoduje to usunięcie bieżących odpowiedzi i podsumowania.',resetConfirm:'Wyczyść odpowiedzi',close:'Zamknij',answerNotice:'Wpisane odpowiedzi pozostają w oryginalnym języku.',voiceUnsupported:'Wpisz odpowiedź. Ta przeglądarka nie obsługuje głosu.',voiceUnavailable:'Brak odpowiedniego głosu. Możesz czytać tekst.',voiceReady:'Odczytaj bieżące pytanie w wybranym języku.',focusGuide:'Zmiana trybu nie usuwa odpowiedzi.'}
+    {
+      "name": "Wigan Council · Apprenticeships",
+      "provider": "Wigan Council",
+      "url": "https://www.wigan.gov.uk/Resident/Jobs-Careers/Become-an-apprentice.aspx"
     },
-    ur:{accessTitle:'رسائی اور زبان',accessSubtitle:'پڑھنے، سننے اور جواب دینے کا طریقہ منتخب کریں۔',languageLabel:'۱۔ اپنی زبان منتخب کریں',listen:'سوال سنیں',footerNote:'آزاد نمونہ · سرکاری سروس کے لنکس · کوئی درخواست نہیں بھیجی جاتی',sample:'کونسل کا سرکاری ذریعہ',resultsSub:'دلچسپیوں کے مطابق تجاویز اور وگن کونسل کی معلومات۔',resultsNote:'یہ خدمات کی فہرست ہے، تصدیق شدہ آسامی یا بکنگ نہیں۔ شرائط، جگہ، فیس اور رسائی کی تصدیق کریں۔',explore:'خدمت کی تفصیل',detailAction:'سرکاری سروس دیکھیں ↗',detailNote:'ذریعہ ۱۶ اکتوبر ۲۰۲۶ کو دیکھا گیا۔ موجودہ تفصیلات فراہم کنندہ سے معلوم کریں۔',areaHint:'علاقہ منتخب کریں، گھر کا پتہ نہیں۔ نتائج فاصلے کے مطابق نہیں چھانٹے جاتے۔',reviewNote:'تجاویز دلچسپیوں کے مطابق ہیں۔ وقت، علاقہ اور مدد خلاصے میں شامل ہیں، یہ دستیابی کی ضمانت نہیں۔',supportHint:'یہ ترجیحات خلاصے میں شامل ہوں گی۔ دستیاب مدد کی تصدیق فراہم کنندہ کرے گا۔',opportunityTypes:['ڈیجیٹل مدد','رضاکارانہ کام','روزگار کی فہرست','انگریزی سیکھنا','بالغوں کی تعلیم'],
-      opportunities:[
-        {title:'TechMates ڈیجیٹل مدد',type:0,icon:'⌨',area:'وگن بورو',schedule:'اجتماعی اور انفرادی مدد',price:'Digital Wigan سے تفصیل معلوم کریں',support:'انفرادی ڈیجیٹل مدد کے بارے میں پوچھیں',description:'Digital Wigan آلات اور آن لائن خدمات میں TechMates اجتماعات اور انفرادی نشستوں کے ذریعے مدد دیتا ہے۔',reason:'آپ نے ڈیجیٹل یا نئی مہارتیں منتخب کیں۔',generic:'روزمرہ ٹیکنالوجی کی مدد جانیں۔'},
-        {title:'مقامی رضاکارانہ کام',type:1,icon:'♡',area:'وگن بورو',schedule:'دستیابی موقع کے مطابق',price:'ہر کردار کی شرائط دیکھیں',support:'منتظم سے مدد کے بارے میں پوچھیں',description:'وگن کونسل رضاکارانہ کام اور تجربے کے مواقع کی رہنمائی کرتی ہے۔ ہر کردار کی شرائط دیکھیں۔',reason:'آپ نے رضاکارانہ کام یا کمیونٹی منتخب کی۔',generic:'مقامی مدد کے طریقے جانیں۔'},
-        {title:'ملازمت، کیریئر اور مہارتیں',type:2,icon:'↗',area:'وگن اور گریٹر مانچسٹر',schedule:'موجودہ آسامیاں اور خدمات دیکھیں',price:'شرائط موقع کے مطابق',support:'درخواست میں مدد کے لنکس',description:'کونسل کی فہرست ملازمت، تربیت، کیریئر اور تعلیم کے سرکاری راستے بتاتی ہے۔',reason:'آپ نے کام تلاش کرنا منتخب کیا۔',generic:'کام کے سرکاری راستے جانیں۔'},
-        {title:'روزمرہ انگریزی · ESOL',type:3,icon:'☏',area:'وگن',schedule:'فراہم کنندہ جائزہ طے کرے گا',price:'اہلیت اور فیس معلوم کریں',support:'انگریزی کورس کا جائزہ',description:'وگن کونسل کے ESOL فارم سے درخواست گزاروں سے کورس کے جائزے کے بارے میں رابطہ کیا جاتا ہے۔',reason:'آپ نے انگریزی کی مشق منتخب کی۔',generic:'انگریزی سیکھنے کا راستہ جانیں۔'},
-        {title:'وگن بالغوں کی تعلیم',type:4,icon:'✧',area:'وگن بورو کے مختلف مقامات',schedule:'موجودہ اوقات دیکھیں',price:'اہلیت کے مطابق مفت کورس',support:'تعلیمی ضرورتیں ٹیم سے بتائیں',description:'انگریزی، ریاضی، ڈیجیٹل اور پیشہ ورانہ تعلیم۔ کونسل کے مطابق رہائشیوں کے لیے ۱۹ سال یا زیادہ عمر اور اہلیت کی شرائط ہیں۔',reason:'آپ نے نئی مہارتیں یا کمیونٹی منتخب کی۔',generic:'مقامی تعلیم کے مواقع جانیں۔'}
-      ],
-      extra:{receiveLabel:'۲۔ پڑھیں یا سنیں',answerLabel:'۳۔ لکھیں یا بولیں',type:'لکھ کر جواب',voice:'بول کر جواب',voiceHint:'آوازیں آپ کے آلے اور زبان پر منحصر ہیں۔',inputHint:'لکھ کر جواب ہمیشہ ممکن ہے۔',voiceSelected:'تجربے کے سوال پر مائیک استعمال کریں اور الفاظ چیک کریں۔',contrast:'زیادہ تضاد',speed:'پڑھنے کی رفتار',allLanguages:'مزید زبانیں ↗',accessTag:'آپ کی سہولت کے مطابق',photoTitle:'وگن کے ساتھ۔',photoCaption:'حقیقی جگہیں۔ مقامی مواقع۔',photoAlt:'وگن پیئر اور نہر میں کشتی',source:'سرکاری ذریعہ',checked:'۱۶ اکتوبر ۲۰۲۶ کو دیکھا',sources:'ذرائع اور نمونے کے بارے میں',sourcesIntro:'یہ Team Wigan کا آزاد نمونہ ہے، سرکاری کونسل سروس نہیں۔ معلومات نیچے دیے گئے سرکاری صفحات سے ہیں۔ دستیابی کی تصدیق کریں۔',photoCredit:'تصویر: Wigan Pier، Gerald England · CC BY-SA 2.0۔ منظر میں تراشی گئی ہے۔',languageTitle:'اپنی زبان تلاش کریں',languageSearch:'زبان تلاش کریں',languageIntro:'انگریزی، پولش اور اردو نمونے میں شامل ہیں۔ مزید زبانیں Google Cloud Translation سے دستیاب ہوں گی۔',apiOffline:'ترجمہ سروس ترتیب نہیں دی گئی۔ انگریزی، پولش اور اردو دستیاب ہیں۔',apiUnavailable:'زبان کی سروس دستیاب نہیں۔ شامل زبانیں کام کرتی ہیں۔',apiReady:'ترجمہ سروس منسلک ہے۔ مزید معاون زبانیں دستیاب ہیں۔',machine:'مشینی ترجمہ — اہم معلومات کی تصدیق کریں۔',translating:'ترجمہ ہو رہا ہے…',translationFailed:'ترجمہ مکمل نہیں ہوا۔ پچھلی زبان اور جوابات محفوظ ہیں۔',loadLanguages:'دوبارہ کوشش کریں',languageEmpty:'کوئی زبان نہیں ملی۔',languageNoApi:'مزید زبانیں ابھی دستیاب نہیں۔ انگریزی، پولش اور اردو کام کرتی ہیں۔',languageAvailable:'دستیاب',micPrivacyTitle:'مائیک سے پہلے',micPrivacy:'براؤزر آواز کو اپنی شناخت کی سروس میں بھیج سکتا ہے۔ آپ لکھ بھی سکتے ہیں۔',startMic:'مائیک کی طرف جائیں',contactError:'درست ای میل یا ۷ سے ۱۵ ہندسوں کا فون نمبر دیں۔',resetTitle:'نئی گفتگو شروع کریں؟',resetText:'موجودہ جوابات اور خلاصہ مٹ جائیں گے۔',resetConfirm:'جوابات صاف کریں',close:'بند کریں',answerNotice:'لکھے ہوئے جوابات اپنی اصل زبان میں رہتے ہیں۔',voiceUnsupported:'اس براؤزر میں آواز سے جواب ممکن نہیں۔ ٹائپ کریں۔',voiceUnavailable:'مناسب آواز نصب نہیں۔ متن پڑھ سکتے ہیں۔',voiceReady:'منتخب زبان میں موجودہ سوال سنیں۔',focusGuide:'طریقہ بدلنے سے جوابات نہیں مٹتے۔'}
+    {
+      "name": "Wigan Council · Careers advice for young people",
+      "provider": "Wigan Council",
+      "url": "https://www.wigan.gov.uk/Resident/Education/Learning-careers-skills-for-young-people.aspx"
+    },
+    {
+      "name": "GMACS · Careers events",
+      "provider": "GMACS",
+      "url": "https://gmacs.co.uk/events/"
+    },
+    {
+      "name": "Wigan Council · LINC2 activities",
+      "provider": "Wigan Council",
+      "url": "https://www.wigan.gov.uk/LINC2/Things-to-do/Things-to-do.aspx"
+    },
+    {
+      "name": "GMACS · Beeline and MBacc gateways",
+      "provider": "GMACS / MBacc",
+      "url": "https://gmacs.co.uk/beeline/"
+    },
+    {
+      "name": "GMCA · Greater Manchester Baccalaureate (MBacc)",
+      "provider": "GMCA",
+      "url": "https://www.greatermanchester-ca.gov.uk/what-we-do/education-work-and-skills/technical-education-city-region/the-greater-manchester-baccalaureate-mbacc/"
+    },
+    {
+      "name": "GMCA · MBacc Award: how it works",
+      "provider": "GMCA",
+      "url": "https://www.greatermanchester-ca.gov.uk/what-we-do/education-work-and-skills/technical-education-city-region/the-greater-manchester-baccalaureate-mbacc/mbacc-award/how-the-award-works/"
     }
-  }
+  ],
+  "photo": {
+    "url": "https://commons.wikimedia.org/wiki/File:Wigan_Pier_(geograph_5676853).jpg",
+    "author": "Gerald England",
+    "license": "https://creativecommons.org/licenses/by-sa/2.0/"
+  },
+  "overrides": {
+    "en": {
+      "accessTitle": "Accessibility & language",
+      "accessSubtitle": "Choose how you read, listen and answer. Change this anytime.",
+      "languageLabel": "1. Choose your language",
+      "listen": "Read this question aloud",
+      "stop": "Stop reading",
+      "footerNote": "Independent concept linked to MBacc resources · Not an official MBacc service",
+      "intro": "Work experience, first jobs and people who can help you get there. Start with what you’re curious about.",
+      "sample": "OFFICIAL RESOURCE",
+      "resultsSub": "Youth-focused routes suggested by your goals, with official MBacc, GMACS and Wigan links.",
+      "resultsNote": "These are official information routes, not live vacancies, guaranteed placements or event bookings. Check age eligibility, dates, access and availability with the provider.",
+      "explore": "Explore this route",
+      "detailAction": "Open official resource ↗",
+      "detailNote": "Checked 16 October 2026. This link is a starting point, not an offer, booking or eligibility decision. A provider or school/college coordinator must confirm age requirements, places and arrangements.",
+      "areaHint": "Choose an area, not your home address. Providers will confirm locations; results are not filtered by distance.",
+      "reviewNote": "Your goals suggest useful links. MBacc gateways help you explore careers; this prototype does not award MBacc credit or approve placements. Discuss opportunities with your careers adviser or coordinator.",
+      "supportHint": "Your preferences go into your plan. Ask the provider what support they can offer.",
+      "opportunityTypes": [
+        "Work experience",
+        "Apprenticeships",
+        "Youth careers support",
+        "Careers events",
+        "Community activities",
+        "MBacc pathways"
+      ],
+      "opportunities": [
+        {
+          "title": "Try work experience in Wigan",
+          "type": 0,
+          "icon": "↗",
+          "area": "Wigan borough",
+          "schedule": "Speak to your school or college coordinator",
+          "price": "Check placement requirements",
+          "support": "Ask about arrangements and support",
+          "description": "Explore Wigan Council’s work-experience information for school and college students. Your coordinator can help you understand suitable options.",
+          "reason": "You chose work experience.",
+          "generic": "A route to exploring what work feels like."
+        },
+        {
+          "title": "Explore apprenticeships",
+          "type": 1,
+          "icon": "⚙",
+          "area": "Wigan & Greater Manchester",
+          "schedule": "Check each vacancy’s start date",
+          "price": "Check the role’s pay and entry requirements",
+          "support": "Application support links available",
+          "description": "Use Wigan Council’s apprenticeship guidance to explore earning while learning and follow official vacancy and application-support links.",
+          "reason": "You chose apprenticeships.",
+          "generic": "Explore a route that combines work and learning."
+        },
+        {
+          "title": "Plan your first step into work",
+          "type": 2,
+          "icon": "✎",
+          "area": "Wigan borough",
+          "schedule": "Ask about a careers appointment",
+          "price": "Check which service is right for your age",
+          "support": "CVs, applications and careers conversations",
+          "description": "Wigan’s youth careers page explains school and college guidance and Aspiring Futures support. Check the service’s age and eligibility details.",
+          "reason": "You chose a first job or exploring your options.",
+          "generic": "Get help turning questions into a plan."
+        },
+        {
+          "title": "Meet employers at careers events",
+          "type": 3,
+          "icon": "☏",
+          "area": "Greater Manchester",
+          "schedule": "See current event listings",
+          "price": "Check each event’s terms",
+          "support": "Ask the organiser about accessibility",
+          "description": "Browse GMACS careers events to find opportunities to learn about work, education and training. Confirm dates and any booking requirements.",
+          "reason": "You chose careers events.",
+          "generic": "Explore a chance to ask questions and meet people."
+        },
+        {
+          "title": "Build skills in your community",
+          "type": 4,
+          "icon": "♡",
+          "area": "Wigan & Leigh",
+          "schedule": "See current youth activities",
+          "price": "Check age limits, costs and arrangements",
+          "support": "Speak to the activity organiser",
+          "description": "Explore Wigan’s LINC2 youth activities and community opportunities. Activities can help you meet people and build experiences to discuss on a CV.",
+          "reason": "You chose community activities or volunteering.",
+          "generic": "Find experiences beyond the classroom."
+        },
+        {
+          "title": "Find your MBacc route with Beeline",
+          "type": 5,
+          "icon": "✧",
+          "area": "Greater Manchester",
+          "schedule": "Explore online at your own pace",
+          "price": "Beeline is designed for ages 14–18",
+          "support": "Share your questions with a careers adviser",
+          "description": "Beeline connects subjects, skills and qualifications to the MBacc’s seven career gateways. Explore what a route into a future career could look like.",
+          "reason": "You chose to explore your options.",
+          "generic": "Explore how your interests connect to a career pathway."
+        }
+      ],
+      "extra": {
+        "receiveLabel": "2. Read or listen",
+        "answerLabel": "3. Type or speak",
+        "type": "Type answers",
+        "voice": "Speak answers",
+        "voiceHint": "Available voices depend on your device and language.",
+        "inputHint": "Your choice. Typed answers always work.",
+        "voiceSelected": "On the experience question, use the microphone button. Check the words before continuing.",
+        "contrast": "High contrast",
+        "speed": "Reading speed",
+        "allLanguages": "Browse more languages ↗",
+        "accessTag": "MADE TO WORK FOR YOU",
+        "photoTitle": "Big ambitions. Local roots.",
+        "photoCaption": "Wigan → Greater Manchester → your future",
+        "photoAlt": "Wigan Pier and a narrowboat on the Leeds and Liverpool Canal",
+        "source": "Official source",
+        "checked": "Checked 16 Oct 2026",
+        "sources": "Sources & about this demo",
+        "sourcesIntro": "An independent Team Wigan concept connecting young people to official MBacc, GMACS and Wigan resources. No partnership, account connection, placement booking or MBacc Award credit is implied. Check eligibility and current details with providers.",
+        "photoCredit": "Photo: Wigan Pier by Gerald England · CC BY-SA 2.0. Display cropped; original image unchanged.",
+        "languageTitle": "Find your language",
+        "languageSearch": "Search languages",
+        "languageIntro": "Choose a language below. More supported languages appear when the live translation service is connected.",
+        "apiOffline": "Live translation is not configured. English, Polish and Urdu remain available.",
+        "apiUnavailable": "Language service unavailable. Built-in languages still work. Try again later.",
+        "apiReady": "Live translation is connected. Translations by Google. More supported languages are available.",
+        "machine": "Machine translation — check important details with the provider.",
+        "translating": "Translating the interface…",
+        "translationFailed": "Translation could not finish. Your previous language and answers have been kept.",
+        "loadLanguages": "Retry language service",
+        "languageEmpty": "No languages match your search.",
+        "languageNoApi": "More languages are not available yet. English, Polish and Urdu work now.",
+        "languageAvailable": "Available",
+        "micPrivacyTitle": "Before using your microphone",
+        "micPrivacy": "Your browser may send audio to its speech-recognition service. Only use the microphone if you are comfortable with this. You can always type instead.",
+        "startMic": "Continue to microphone",
+        "contactError": "Enter a valid email address or a phone number with 7–15 digits.",
+        "resetTitle": "Start a fresh conversation?",
+        "resetText": "This will clear your current answers and summary in this tab.",
+        "resetConfirm": "Clear answers",
+        "close": "Close",
+        "answerNotice": "Your typed answers stay in their original language. Changing the interface does not translate them.",
+        "voiceUnsupported": "Voice input is unavailable in this browser. Please use typing.",
+        "voiceUnavailable": "No matching voice is installed. Reading is still available.",
+        "voiceReady": "Read the current question aloud in the selected language.",
+        "focusGuide": "You can switch between the form and guide without losing answers."
+      },
+      "eyebrow": "YOUNG PEOPLE. BIG POSSIBILITIES.",
+      "headline": "Your future.<br>Your <em>next move.</em>",
+      "prototypeLabel": "TEAM WIGAN CONCEPT",
+      "footerName": "MBacc Connect · A Team Wigan idea",
+      "steps": [
+        "Your goals",
+        "Your pathway",
+        "Your time",
+        "Your support",
+        "Your plan"
+      ],
+      "headings": [
+        "What’s your next move?",
+        "What could you see yourself doing?",
+        "Make it fit around your life.",
+        "What would help you get started?",
+        "Your next-step plan."
+      ],
+      "subtitles": [
+        "Pick a few things you want to explore. You don’t need it all figured out.",
+        "Explore the seven MBacc career gateways, then tell us a little about yourself.",
+        "Tell us where you are in your journey and when you’re free.",
+        "Choose the support that would give you more confidence.",
+        "Check your interests and experience. It’s your story — you can change it."
+      ],
+      "interestNames": [
+        "Work experience",
+        "Apprenticeships",
+        "My first job",
+        "Careers events",
+        "Community & volunteering",
+        "Explore my options"
+      ],
+      "interestDesc": [
+        "Try a career in real life",
+        "Earn and learn",
+        "Take a first step into work",
+        "Meet employers and advisers",
+        "Build skills and meet people",
+        "Find an MBacc pathway"
+      ],
+      "interestHint": "Start with what interests you. These choices are suggestions, not a test or an application.",
+      "experienceLabel": "What do you enjoy, or what have you tried?",
+      "experiencePlaceholder": "For example: I built a website for a class project, help at a sports club and would like to try a digital career.",
+      "experienceHint": "School projects, hobbies, gaming, sport and helping your community can all help you explain your skills.",
+      "exampleExperience": "I made a website for a school project and helped run a community sports event. I enjoy solving problems and want to try digital work experience.",
+      "supportNames": [
+        "Language support",
+        "CV & application help",
+        "Travel or cost advice",
+        "Step-free access",
+        "A careers conversation",
+        "I’m ready to explore"
+      ],
+      "supportDesc": [
+        "Understand the next steps",
+        "Tell my story confidently",
+        "Make getting there easier",
+        "An accessible place",
+        "Talk it through with someone",
+        "No extra help right now"
+      ],
+      "guideMessages": [
+        "What would you like to try next — work experience, an apprenticeship, a first job or meeting people at an event? Pick what feels right.",
+        "Which MBacc career gateways sound interesting? You can choose more than one. Then tell me about a hobby, project or something you’ve helped with.",
+        "Are you at school, at college or looking for your next step? Choose times and places that work for you.",
+        "Would help with a CV, travel, language or a careers conversation make the next step easier?",
+        "Here’s your plan so far. You can change anything before exploring the links."
+      ],
+      "helpEmpty": "Tell me about a project, hobby, sport or time you helped someone. What did you do and which part did you enjoy?",
+      "helpSchool": "That could show teamwork, creativity or organisation. What was your part, and what would you like to try next?",
+      "helpCare": "Helping people can show reliability and communication. What did you do, and which skills would you like to build?",
+      "helpGeneral": "What did you do, what did you learn, and which part would you like to explore in a future career?",
+      "ready": "YOUR INTERESTS. YOUR ROUTE. YOUR NEXT STEP.",
+      "resultsTitle": "Your future starts with a next step.",
+      "summaryTitle": "Your first experience profile.",
+      "summaryDescription": "A starting point for a careers conversation or future application. Edit it until it sounds like you.",
+      "noExperience": "I am exploring my first steps into work and would like help identifying my skills.",
+      "referralTitle": "Talk it through with someone.",
+      "referralDescription": "Preview a request for support from a careers adviser or school/college coordinator. Nothing is sent.",
+      "referralButton": "Preview a careers conversation",
+      "generalRequest": "Help with my next step into work",
+      "youth": {
+        "gatewayLabel": "Which MBacc gateways interest you?",
+        "gatewayHint": "Pick any that spark your curiosity. You can explore all seven without choosing a career today.",
+        "gatewayNames": [
+          "Construction & the Green Economy",
+          "Creative, Culture & Sport",
+          "Digital & Technology",
+          "Education & Early Years",
+          "Engineering & Manufacturing",
+          "Financial, Business & Professional Services",
+          "Health & Social Care"
+        ],
+        "stageLabel": "Where are you in your journey?",
+        "stages": [
+          "Prefer not to say",
+          "School / GCSEs",
+          "College / sixth form",
+          "Apprenticeship / training",
+          "Looking for my next step"
+        ],
+        "gatewaysReview": "Your MBacc interests",
+        "stageReview": "Your current stage",
+        "gatewaySummary": "Career gateways I want to explore: ",
+        "stageSummary": "My current stage: ",
+        "connectionTag": "MBACC × TEAM WIGAN",
+        "connectionTitle": "A clearer route from school to work.",
+        "connectionText": "Explore work experience, apprenticeships and careers through MBacc gateways — with local opportunities to build your confidence.",
+        "connectionLink": "What is MBacc? ↗",
+        "pathwayTitle": "Take your interests further with MBacc.",
+        "pathwayText": "Explore your chosen gateways on Beeline. Your answers stay here — no profile is sent to MBacc or GMACS.",
+        "pathwayDefault": "Not sure which gateway? Explore all seven on Beeline.",
+        "pathwayButton": "Explore Beeline ↗",
+        "profileNote": "This is a personal draft, not an MBacc Award record or a verified qualification."
+      }
+    },
+    "pl": {
+      "accessTitle": "Dostępność i język",
+      "accessSubtitle": "Wybierz, jak czytasz, słuchasz i odpowiadasz.",
+      "languageLabel": "1. Wybierz język",
+      "listen": "Przeczytaj pytanie",
+      "footerNote": "Niezależna koncepcja z linkami MBacc · Nie jest oficjalną usługą MBacc",
+      "sample": "OFICJALNE INFORMACJE",
+      "resultsSub": "Ścieżki dla młodych osób z oficjalnymi linkami MBacc, GMACS i Wigan.",
+      "resultsNote": "To oficjalne informacje, nie potwierdzone oferty, miejsca ani rezerwacje. Sprawdź wiek, daty i dostępność.",
+      "explore": "Poznaj tę ścieżkę",
+      "detailAction": "Oficjalna strona ↗",
+      "detailNote": "Sprawdzono 16.10.2026. To informacje, nie oferta ani potwierdzenie kwalifikacji. Warunki uzgodnij z organizatorem lub szkołą.",
+      "areaHint": "Wybierz okolicę, nie adres domowy. Wyniki nie są filtrowane według odległości.",
+      "reviewNote": "Cele sugerują linki. Prototyp nie przyznaje punktów MBacc ani nie zatwierdza praktyk. Porozmawiaj z doradcą.",
+      "supportHint": "Preferencje trafią do planu. Organizator potwierdzi dostępne wsparcie.",
+      "opportunityTypes": [
+        "Doświadczenie zawodowe",
+        "Nauka zawodu",
+        "Wsparcie kariery",
+        "Wydarzenia kariery",
+        "Aktywności lokalne",
+        "Ścieżki MBacc"
+      ],
+      "opportunities": [
+        {
+          "title": "Poznaj pracę w Wigan",
+          "type": 0,
+          "icon": "↗",
+          "area": "Gmina Wigan",
+          "schedule": "Porozmawiaj z koordynatorem szkoły",
+          "price": "Sprawdź wymagania praktyk",
+          "support": "Zapytaj o organizację i wsparcie",
+          "description": "Informacje Wigan Council o doświadczeniu zawodowym dla uczniów szkół i college’ów. Koordynator pomoże poznać możliwości.",
+          "reason": "Wybrano doświadczenie zawodowe.",
+          "generic": "Poznaj pracę w praktyce."
+        },
+        {
+          "title": "Poznaj naukę zawodu",
+          "type": 1,
+          "icon": "⚙",
+          "area": "Wigan i Greater Manchester",
+          "schedule": "Sprawdź datę w ofercie",
+          "price": "Sprawdź wynagrodzenie i wymagania",
+          "support": "Linki do pomocy w zgłoszeniu",
+          "description": "Wskazówki Wigan Council dotyczące łączenia pracy i nauki oraz oficjalne linki do ofert.",
+          "reason": "Wybrano naukę zawodu.",
+          "generic": "Połącz pracę z nauką."
+        },
+        {
+          "title": "Zaplanuj pierwszy krok do pracy",
+          "type": 2,
+          "icon": "✎",
+          "area": "Gmina Wigan",
+          "schedule": "Zapytaj o rozmowę z doradcą",
+          "price": "Sprawdź warunki wieku",
+          "support": "CV, zgłoszenia i rozmowy o karierze",
+          "description": "Informacje o doradztwie szkolnym i wsparciu Aspiring Futures. Sprawdź warunki danej usługi.",
+          "reason": "Wybrano pierwszą pracę lub poznawanie możliwości.",
+          "generic": "Zamień pytania w plan."
+        },
+        {
+          "title": "Poznaj pracodawców na wydarzeniach",
+          "type": 3,
+          "icon": "☏",
+          "area": "Greater Manchester",
+          "schedule": "Sprawdź aktualne wydarzenia",
+          "price": "Sprawdź warunki udziału",
+          "support": "Zapytaj organizatora o dostępność",
+          "description": "Wydarzenia GMACS o pracy, nauce i szkoleniach. Potwierdź terminy i rezerwację.",
+          "reason": "Wybrano wydarzenia kariery.",
+          "generic": "Zadawaj pytania i poznawaj ludzi."
+        },
+        {
+          "title": "Rozwijaj się w społeczności",
+          "type": 4,
+          "icon": "♡",
+          "area": "Wigan i Leigh",
+          "schedule": "Zobacz aktualne aktywności",
+          "price": "Sprawdź wiek, koszty i zasady",
+          "support": "Porozmawiaj z organizatorem",
+          "description": "Aktywności LINC2 dla młodzieży i lokalne możliwości pomagają poznawać ludzi i zdobywać doświadczenie do CV.",
+          "reason": "Wybrano społeczność lub wolontariat.",
+          "generic": "Zdobywaj doświadczenie poza klasą."
+        },
+        {
+          "title": "Znajdź ścieżkę MBacc w Beeline",
+          "type": 5,
+          "icon": "✧",
+          "area": "Greater Manchester",
+          "schedule": "Poznawaj online we własnym tempie",
+          "price": "Beeline jest dla osób w wieku 14–18 lat",
+          "support": "Omów pytania z doradcą",
+          "description": "Beeline łączy przedmioty, umiejętności i kwalifikacje z siedmioma ścieżkami MBacc.",
+          "reason": "Wybrano poznawanie możliwości.",
+          "generic": "Połącz zainteresowania ze ścieżką kariery."
+        }
+      ],
+      "extra": {
+        "receiveLabel": "2. Czytaj lub słuchaj",
+        "answerLabel": "3. Pisz lub mów",
+        "type": "Wpisuj odpowiedzi",
+        "voice": "Mów odpowiedzi",
+        "voiceHint": "Głosy zależą od urządzenia i języka.",
+        "inputHint": "Wpisywanie zawsze działa.",
+        "voiceSelected": "Przy pytaniu o doświadczenie użyj mikrofonu. Sprawdź zapis.",
+        "contrast": "Wysoki kontrast",
+        "speed": "Tempo czytania",
+        "allLanguages": "Więcej języków ↗",
+        "accessTag": "DOPASUJ DO SIEBIE",
+        "photoTitle": "Wielkie plany. Lokalne korzenie.",
+        "photoCaption": "Wigan → Greater Manchester → Twoja przyszłość",
+        "photoAlt": "Wigan Pier i łódź na kanale",
+        "source": "Oficjalne źródło",
+        "checked": "Sprawdzono 16.10.2026",
+        "sources": "Źródła i informacje o demo",
+        "sourcesIntro": "Niezależny pomysł Team Wigan z oficjalnymi linkami MBacc, GMACS i Wigan. Bez partnerstwa, rezerwacji ani punktów MBacc. Sprawdź warunki u organizatora.",
+        "photoCredit": "Zdjęcie: Wigan Pier, Gerald England · CC BY-SA 2.0. Kadr przycięty w widoku.",
+        "languageTitle": "Znajdź swój język",
+        "languageSearch": "Szukaj języka",
+        "languageIntro": "Angielski, polski i urdu są dostępne lokalnie. Inne języki wymagają połączenia z Google Cloud Translation.",
+        "apiOffline": "Tłumaczenie online nie jest skonfigurowane. Angielski, polski i urdu działają.",
+        "apiUnavailable": "Usługa językowa jest niedostępna. Wbudowane języki działają.",
+        "apiReady": "Tłumaczenie online jest połączone. Dostępne są inne obsługiwane języki.",
+        "machine": "Tłumaczenie maszynowe — potwierdź ważne informacje.",
+        "translating": "Tłumaczenie interfejsu…",
+        "translationFailed": "Nie udało się przetłumaczyć. Zachowano język i odpowiedzi.",
+        "loadLanguages": "Spróbuj ponownie",
+        "languageEmpty": "Brak pasujących języków.",
+        "languageNoApi": "Inne języki nie są jeszcze dostępne. Angielski, polski i urdu działają.",
+        "languageAvailable": "Dostępny",
+        "micPrivacyTitle": "Przed użyciem mikrofonu",
+        "micPrivacy": "Przeglądarka może wysyłać dźwięk do swojej usługi rozpoznawania mowy. Zawsze możesz pisać.",
+        "startMic": "Przejdź do mikrofonu",
+        "contactError": "Podaj poprawny e-mail lub numer telefonu z 7–15 cyframi.",
+        "resetTitle": "Zacząć nową rozmowę?",
+        "resetText": "Spowoduje to usunięcie bieżących odpowiedzi i podsumowania.",
+        "resetConfirm": "Wyczyść odpowiedzi",
+        "close": "Zamknij",
+        "answerNotice": "Wpisane odpowiedzi pozostają w oryginalnym języku.",
+        "voiceUnsupported": "Wpisz odpowiedź. Ta przeglądarka nie obsługuje głosu.",
+        "voiceUnavailable": "Brak odpowiedniego głosu. Możesz czytać tekst.",
+        "voiceReady": "Odczytaj bieżące pytanie w wybranym języku.",
+        "focusGuide": "Zmiana trybu nie usuwa odpowiedzi."
+      },
+      "eyebrow": "MŁODZI LUDZIE. WIELKIE MOŻLIWOŚCI.",
+      "headline": "Twoja przyszłość.<br><em>Twój kolejny krok.</em>",
+      "intro": "Doświadczenie zawodowe, pierwsza praca i ludzie, którzy pomogą Ci zacząć.",
+      "prototypeLabel": "KONCEPCJA TEAM WIGAN",
+      "footerName": "MBacc Connect · Pomysł Team Wigan",
+      "steps": [
+        "Twoje cele",
+        "Twoja ścieżka",
+        "Twój czas",
+        "Wsparcie",
+        "Twój plan"
+      ],
+      "headings": [
+        "Jaki będzie Twój następny krok?",
+        "Co chcesz spróbować robić?",
+        "Dopasujmy to do Twojego życia.",
+        "Co pomoże Ci zacząć?",
+        "Twój plan kolejnych kroków."
+      ],
+      "subtitles": [
+        "Wybierz kilka rzeczy. Nie musisz jeszcze znać wszystkich odpowiedzi.",
+        "Poznaj siedem ścieżek MBacc i opowiedz o sobie.",
+        "Powiedz, na jakim jesteś etapie i kiedy masz czas.",
+        "Wybierz pomoc, która da Ci więcej pewności.",
+        "Sprawdź zainteresowania i doświadczenie. Możesz je zmienić."
+      ],
+      "interestNames": [
+        "Doświadczenie zawodowe",
+        "Praktyczna nauka zawodu",
+        "Moja pierwsza praca",
+        "Wydarzenia kariery",
+        "Społeczność i wolontariat",
+        "Poznać możliwości"
+      ],
+      "interestDesc": [
+        "Wypróbuj zawód",
+        "Pracuj i ucz się",
+        "Zrób pierwszy krok",
+        "Poznaj pracodawców",
+        "Zdobądź doświadczenie",
+        "Znajdź ścieżkę MBacc"
+      ],
+      "interestHint": "To wskazówki, nie test ani podanie o pracę.",
+      "experienceLabel": "Co lubisz lub czego już próbowałeś?",
+      "experiencePlaceholder": "Na przykład: stworzyłem stronę w szkole i pomagam w klubie sportowym.",
+      "experienceHint": "Projekty szkolne, hobby, gry, sport i pomoc społeczności też pokazują umiejętności.",
+      "exampleExperience": "Stworzyłem stronę na projekt szkolny i pomagałem przy lokalnym wydarzeniu sportowym. Lubię rozwiązywać problemy i chcę poznać pracę w technologii.",
+      "supportNames": [
+        "Wsparcie językowe",
+        "CV i zgłoszenia",
+        "Dojazd i koszty",
+        "Dostęp bez schodów",
+        "Rozmowa o karierze",
+        "Chcę już zacząć"
+      ],
+      "supportDesc": [
+        "Zrozumieć kroki",
+        "Opisać swoje doświadczenie",
+        "Ułatwić udział",
+        "Dostępne miejsce",
+        "Porozmawiać z doradcą",
+        "Bez dodatkowej pomocy"
+      ],
+      "guideMessages": [
+        "Co chcesz spróbować: doświadczenia zawodowego, nauki zawodu, pierwszej pracy czy wydarzenia?",
+        "Które ścieżki MBacc Cię ciekawią? Wybierz kilka i opowiedz o hobby lub projekcie.",
+        "Jesteś w szkole, college’u czy szukasz następnego kroku? Wybierz czas i miejsce.",
+        "Czy pomoże CV, dojazd, język lub rozmowa z doradcą?",
+        "Sprawdź swój plan. Wszystko możesz zmienić."
+      ],
+      "helpEmpty": "Opowiedz o projekcie, hobby, sporcie lub pomocy komuś. Co robiłeś?",
+      "helpSchool": "To może pokazywać współpracę i kreatywność. Jaka była Twoja rola?",
+      "helpCare": "Pomaganie pokazuje odpowiedzialność i komunikację. Jakie zadania wykonywałeś?",
+      "helpGeneral": "Co robiłeś, czego się nauczyłeś i co chcesz poznać w przyszłej pracy?",
+      "ready": "TWOJE CELE. TWOJA ŚCIEŻKA. TWÓJ KROK.",
+      "resultsTitle": "Twoja przyszłość zaczyna się od kroku.",
+      "summaryTitle": "Twój pierwszy profil doświadczenia.",
+      "summaryDescription": "Początek rozmowy o karierze lub przyszłego zgłoszenia. Możesz zmienić tekst.",
+      "noExperience": "Poznaję pierwsze kroki do pracy i chcę odkryć swoje umiejętności.",
+      "referralTitle": "Porozmawiaj o swoim planie.",
+      "referralDescription": "Podgląd prośby do doradcy lub koordynatora szkoły. Nic nie jest wysyłane.",
+      "referralButton": "Podgląd rozmowy o karierze",
+      "generalRequest": "Pomoc w pierwszym kroku do pracy",
+      "youth": {
+        "gatewayLabel": "Które ścieżki MBacc Cię ciekawią?",
+        "gatewayHint": "Wybierz dowolne. Nie musisz już decydować o zawodzie.",
+        "gatewayNames": [
+          "Budownictwo i zielona gospodarka",
+          "Kreatywność, kultura i sport",
+          "Technologie cyfrowe",
+          "Edukacja i wczesne lata",
+          "Inżynieria i produkcja",
+          "Finanse, biznes i usługi profesjonalne",
+          "Zdrowie i opieka społeczna"
+        ],
+        "stageLabel": "Na jakim jesteś etapie?",
+        "stages": [
+          "Wolę nie mówić",
+          "Szkoła / GCSE",
+          "College / sixth form",
+          "Nauka zawodu / szkolenie",
+          "Szukam kolejnego kroku"
+        ],
+        "gatewaysReview": "Zainteresowania MBacc",
+        "stageReview": "Obecny etap",
+        "gatewaySummary": "Ścieżki kariery, które chcę poznać: ",
+        "stageSummary": "Mój obecny etap: ",
+        "connectionTag": "MBACC × TEAM WIGAN",
+        "connectionTitle": "Twój pomysł. Większa ścieżka.",
+        "connectionText": "Dostępny formularz pomaga młodym osobom i łączy z oficjalnymi ścieżkami MBacc oraz lokalnymi możliwościami.",
+        "connectionLink": "Czym jest MBacc? ↗",
+        "pathwayTitle": "Rozwiń zainteresowania z MBacc.",
+        "pathwayText": "Poznaj wybrane ścieżki w Beeline. Żadne odpowiedzi nie są wysyłane do MBacc ani GMACS.",
+        "pathwayDefault": "Nie wiesz? Poznaj wszystkie ścieżki w Beeline.",
+        "pathwayButton": "Poznaj Beeline ↗",
+        "profileNote": "To osobisty szkic, nie zapis nagrody MBacc ani potwierdzona kwalifikacja."
+      }
+    },
+    "ur": {
+      "accessTitle": "رسائی اور زبان",
+      "accessSubtitle": "پڑھنے، سننے اور جواب دینے کا طریقہ منتخب کریں۔",
+      "languageLabel": "۱۔ اپنی زبان منتخب کریں",
+      "listen": "سوال سنیں",
+      "footerNote": "آزاد تصور جو MBacc کے ذرائع سے جوڑتا ہے · سرکاری MBacc سروس نہیں",
+      "sample": "سرکاری معلومات",
+      "resultsSub": "نوجوانوں کے لیے MBacc، GMACS اور وگن کے سرکاری روابط۔",
+      "resultsNote": "یہ سرکاری معلوماتی راستے ہیں، یقینی آسامیاں یا بکنگ نہیں۔ عمر، تاریخ، رسائی اور دستیابی معلوم کریں۔",
+      "explore": "راستہ دیکھیں",
+      "detailAction": "سرکاری معلومات کھولیں ↗",
+      "detailNote": "۱۶ اکتوبر ۲۰۲۶ کو دیکھا گیا۔ یہ معلومات ہیں، پیشکش یا بکنگ نہیں۔ عمر اور انتظامات فراہم کنندہ یا اسکول سے پوچھیں۔",
+      "areaHint": "علاقہ منتخب کریں، گھر کا پتہ نہیں۔ نتائج فاصلے کے مطابق نہیں چھانٹے جاتے۔",
+      "reviewNote": "مقاصد مفید روابط تجویز کرتے ہیں۔ یہ نمونہ MBacc کریڈٹ یا پلیسمنٹ منظور نہیں کرتا۔ کیریئر مشیر سے بات کریں۔",
+      "supportHint": "ترجیحات منصوبے میں شامل ہوں گی۔ دستیاب مدد فراہم کنندہ سے پوچھیں۔",
+      "opportunityTypes": [
+        "کام کا تجربہ",
+        "اپرنٹس شپ",
+        "نوجوانوں کی رہنمائی",
+        "کیریئر تقریب",
+        "کمیونٹی سرگرمیاں",
+        "MBacc راستے"
+      ],
+      "opportunities": [
+        {
+          "title": "وگن میں کام کا تجربہ",
+          "type": 0,
+          "icon": "↗",
+          "area": "وگن بورو",
+          "schedule": "اسکول یا کالج کے رابطہ کار سے بات کریں",
+          "price": "پلیسمنٹ کی شرائط دیکھیں",
+          "support": "انتظامات اور مدد معلوم کریں",
+          "description": "وگن کونسل کے اسکول اور کالج کے طلبہ کے لیے کام کے تجربے کی معلومات دیکھیں۔",
+          "reason": "آپ نے کام کا تجربہ منتخب کیا۔",
+          "generic": "کام کو آزما کر جاننے کا راستہ۔"
+        },
+        {
+          "title": "اپرنٹس شپ جانیں",
+          "type": 1,
+          "icon": "⚙",
+          "area": "وگن اور گریٹر مانچسٹر",
+          "schedule": "ہر آسامی کی تاریخ دیکھیں",
+          "price": "معاوضہ اور داخلے کی شرائط دیکھیں",
+          "support": "درخواست میں مدد کے روابط",
+          "description": "وگن کونسل کی رہنمائی سے کام اور تعلیم کو ساتھ لے جانے کے مواقع اور سرکاری روابط جانیں۔",
+          "reason": "آپ نے اپرنٹس شپ منتخب کی۔",
+          "generic": "کام اور تعلیم کو جوڑیں۔"
+        },
+        {
+          "title": "کام کی طرف پہلا قدم",
+          "type": 2,
+          "icon": "✎",
+          "area": "وگن بورو",
+          "schedule": "کیریئر ملاقات کے بارے میں پوچھیں",
+          "price": "عمر کے مطابق سروس معلوم کریں",
+          "support": "سی وی، درخواست اور گفتگو",
+          "description": "نوجوانوں کی رہنمائی اور Aspiring Futures کے بارے میں وگن کی معلومات دیکھیں۔ اہلیت فراہم کنندہ سے معلوم کریں۔",
+          "reason": "آپ نے پہلی ملازمت یا راستے جاننا منتخب کیا۔",
+          "generic": "سوالوں کو منصوبے میں بدلیں۔"
+        },
+        {
+          "title": "کیریئر تقریبات میں آجروں سے ملیں",
+          "type": 3,
+          "icon": "☏",
+          "area": "گریٹر مانچسٹر",
+          "schedule": "موجودہ تقریبات دیکھیں",
+          "price": "ہر تقریب کی شرائط دیکھیں",
+          "support": "رسائی کے بارے میں منتظم سے پوچھیں",
+          "description": "GMACS کی تقریبات سے کام، تعلیم اور تربیت جانیں۔ تاریخ اور بکنگ کی تصدیق کریں۔",
+          "reason": "آپ نے کیریئر تقریبات منتخب کیں۔",
+          "generic": "سوال پوچھیں اور لوگوں سے ملیں۔"
+        },
+        {
+          "title": "کمیونٹی میں مہارتیں بنائیں",
+          "type": 4,
+          "icon": "♡",
+          "area": "وگن اور لی",
+          "schedule": "نوجوانوں کی موجودہ سرگرمیاں دیکھیں",
+          "price": "عمر، خرچ اور انتظامات معلوم کریں",
+          "support": "منتظم سے بات کریں",
+          "description": "LINC2 کی نوجوانوں کی سرگرمیاں اور مقامی مواقع دیکھیں اور سی وی کے لیے تجربہ بنائیں۔",
+          "reason": "آپ نے کمیونٹی یا رضاکاری منتخب کی۔",
+          "generic": "کلاس کے باہر تجربہ حاصل کریں۔"
+        },
+        {
+          "title": "Beeline سے MBacc راستہ جانیں",
+          "type": 5,
+          "icon": "✧",
+          "area": "گریٹر مانچسٹر",
+          "schedule": "اپنی رفتار سے آن لائن دیکھیں",
+          "price": "Beeline عمر ۱۴ تا ۱۸ کے لیے ہے",
+          "support": "سوال کیریئر مشیر سے پوچھیں",
+          "description": "Beeline مضامین، مہارتوں اور قابلیت کو MBacc کے سات کیریئر راستوں سے جوڑتا ہے۔",
+          "reason": "آپ نے اپنے راستے جاننا منتخب کیا۔",
+          "generic": "دلچسپی کو کیریئر سے جوڑیں۔"
+        }
+      ],
+      "extra": {
+        "receiveLabel": "۲۔ پڑھیں یا سنیں",
+        "answerLabel": "۳۔ لکھیں یا بولیں",
+        "type": "لکھ کر جواب",
+        "voice": "بول کر جواب",
+        "voiceHint": "آوازیں آپ کے آلے اور زبان پر منحصر ہیں۔",
+        "inputHint": "لکھ کر جواب ہمیشہ ممکن ہے۔",
+        "voiceSelected": "تجربے کے سوال پر مائیک استعمال کریں اور الفاظ چیک کریں۔",
+        "contrast": "زیادہ تضاد",
+        "speed": "پڑھنے کی رفتار",
+        "allLanguages": "مزید زبانیں ↗",
+        "accessTag": "آپ کی سہولت کے مطابق",
+        "photoTitle": "بڑے خواب۔ مقامی تعلق۔",
+        "photoCaption": "وگن ← گریٹر مانچسٹر ← آپ کا مستقبل",
+        "photoAlt": "وگن پیئر اور نہر میں کشتی",
+        "source": "سرکاری ذریعہ",
+        "checked": "۱۶ اکتوبر ۲۰۲۶ کو دیکھا",
+        "sources": "ذرائع اور نمونے کے بارے میں",
+        "sourcesIntro": "Team Wigan کا آزاد خیال جو MBacc، GMACS اور وگن کے سرکاری روابط دیتا ہے۔ شراکت، بکنگ یا MBacc کریڈٹ کا دعویٰ نہیں۔",
+        "photoCredit": "تصویر: Wigan Pier، Gerald England · CC BY-SA 2.0۔ منظر میں تراشی گئی ہے۔",
+        "languageTitle": "اپنی زبان تلاش کریں",
+        "languageSearch": "زبان تلاش کریں",
+        "languageIntro": "انگریزی، پولش اور اردو نمونے میں شامل ہیں۔ مزید زبانیں Google Cloud Translation سے دستیاب ہوں گی۔",
+        "apiOffline": "ترجمہ سروس ترتیب نہیں دی گئی۔ انگریزی، پولش اور اردو دستیاب ہیں۔",
+        "apiUnavailable": "زبان کی سروس دستیاب نہیں۔ شامل زبانیں کام کرتی ہیں۔",
+        "apiReady": "ترجمہ سروس منسلک ہے۔ مزید معاون زبانیں دستیاب ہیں۔",
+        "machine": "مشینی ترجمہ — اہم معلومات کی تصدیق کریں۔",
+        "translating": "ترجمہ ہو رہا ہے…",
+        "translationFailed": "ترجمہ مکمل نہیں ہوا۔ پچھلی زبان اور جوابات محفوظ ہیں۔",
+        "loadLanguages": "دوبارہ کوشش کریں",
+        "languageEmpty": "کوئی زبان نہیں ملی۔",
+        "languageNoApi": "مزید زبانیں ابھی دستیاب نہیں۔ انگریزی، پولش اور اردو کام کرتی ہیں۔",
+        "languageAvailable": "دستیاب",
+        "micPrivacyTitle": "مائیک سے پہلے",
+        "micPrivacy": "براؤزر آواز کو اپنی شناخت کی سروس میں بھیج سکتا ہے۔ آپ لکھ بھی سکتے ہیں۔",
+        "startMic": "مائیک کی طرف جائیں",
+        "contactError": "درست ای میل یا ۷ سے ۱۵ ہندسوں کا فون نمبر دیں۔",
+        "resetTitle": "نئی گفتگو شروع کریں؟",
+        "resetText": "موجودہ جوابات اور خلاصہ مٹ جائیں گے۔",
+        "resetConfirm": "جوابات صاف کریں",
+        "close": "بند کریں",
+        "answerNotice": "لکھے ہوئے جوابات اپنی اصل زبان میں رہتے ہیں۔",
+        "voiceUnsupported": "اس براؤزر میں آواز سے جواب ممکن نہیں۔ ٹائپ کریں۔",
+        "voiceUnavailable": "مناسب آواز نصب نہیں۔ متن پڑھ سکتے ہیں۔",
+        "voiceReady": "منتخب زبان میں موجودہ سوال سنیں۔",
+        "focusGuide": "طریقہ بدلنے سے جوابات نہیں مٹتے۔"
+      },
+      "eyebrow": "نوجوان۔ بڑے امکانات۔",
+      "headline": "آپ کا مستقبل۔<br><em>آپ کا اگلا قدم۔</em>",
+      "intro": "کام کا تجربہ، پہلی ملازمت اور آگے بڑھنے میں مدد۔ اپنی دلچسپی سے شروع کریں۔",
+      "prototypeLabel": "TEAM WIGAN کا تصور",
+      "footerName": "MBacc Connect · Team Wigan کا خیال",
+      "steps": [
+        "مقاصد",
+        "کیریئر کا راستہ",
+        "آپ کا وقت",
+        "مدد",
+        "آپ کا منصوبہ"
+      ],
+      "headings": [
+        "آپ کا اگلا قدم کیا ہے؟",
+        "آپ کیا کرنا آزمانا چاہیں گے؟",
+        "اپنی زندگی کے مطابق۔",
+        "آغاز میں کیا مدد چاہیے؟",
+        "آپ کے اگلے قدم کا منصوبہ۔"
+      ],
+      "subtitles": [
+        "چند دلچسپ چیزیں منتخب کریں۔ ابھی سب جاننا ضروری نہیں۔",
+        "MBacc کے سات کیریئر راستے دیکھیں اور اپنے بارے میں بتائیں۔",
+        "اپنا تعلیمی مرحلہ اور دستیابی بتائیں۔",
+        "وہ مدد منتخب کریں جو اعتماد بڑھائے۔",
+        "دلچسپیاں اور تجربہ چیک کریں۔ آپ تبدیل کر سکتے ہیں۔"
+      ],
+      "interestNames": [
+        "کام کا تجربہ",
+        "اپرنٹس شپ",
+        "میری پہلی ملازمت",
+        "کیریئر تقریبات",
+        "کمیونٹی اور رضاکاری",
+        "اپنے راستے جاننا"
+      ],
+      "interestDesc": [
+        "کیریئر آزما کر دیکھیں",
+        "کمائیں اور سیکھیں",
+        "کام کا پہلا قدم",
+        "آجروں سے ملیں",
+        "مہارتیں اور تعلقات",
+        "MBacc راستہ تلاش کریں"
+      ],
+      "interestHint": "یہ تجاویز ہیں، امتحان یا ملازمت کی درخواست نہیں۔",
+      "experienceLabel": "آپ کو کیا پسند ہے یا کیا آزمایا ہے؟",
+      "experiencePlaceholder": "مثال: اسکول میں ویب سائٹ بنائی اور کھیل کے کلب میں مدد کی۔",
+      "experienceHint": "اسکول منصوبے، مشاغل، گیمنگ، کھیل اور کمیونٹی کی مدد بھی مہارتیں دکھاتے ہیں۔",
+      "exampleExperience": "میں نے اسکول کے منصوبے میں ویب سائٹ بنائی اور مقامی کھیل کی تقریب میں مدد کی۔ مجھے مسائل حل کرنا پسند ہے اور ڈیجیٹل کام کا تجربہ چاہتا ہوں۔",
+      "supportNames": [
+        "زبان میں مدد",
+        "سی وی اور درخواست",
+        "سفر اور خرچ کا مشورہ",
+        "بغیر سیڑھیوں کی رسائی",
+        "کیریئر پر گفتگو",
+        "میں تیار ہوں"
+      ],
+      "supportDesc": [
+        "اگلا قدم سمجھیں",
+        "اپنا تجربہ بتائیں",
+        "پہنچنا آسان بنائیں",
+        "قابلِ رسائی جگہ",
+        "کسی سے بات کریں",
+        "مزید مدد نہیں"
+      ],
+      "guideMessages": [
+        "کام کا تجربہ، اپرنٹس شپ، پہلی ملازمت یا تقریب؟ جو مناسب لگے منتخب کریں۔",
+        "MBacc کے کون سے راستے دلچسپ ہیں؟ پھر شوق یا منصوبے کے بارے میں بتائیں۔",
+        "آپ اسکول، کالج یا اگلا قدم تلاش کر رہے ہیں؟ وقت اور جگہ منتخب کریں۔",
+        "سی وی، سفر، زبان یا کیریئر گفتگو میں مدد چاہیے؟",
+        "منصوبہ چیک کریں۔ آپ سب کچھ بدل سکتے ہیں۔"
+      ],
+      "helpEmpty": "کسی منصوبے، شوق، کھیل یا مدد کے بارے میں بتائیں۔ آپ نے کیا کیا؟",
+      "helpSchool": "یہ ٹیم ورک یا تخلیقی صلاحیت دکھا سکتا ہے۔ آپ کا کردار کیا تھا؟",
+      "helpCare": "مدد کرنا ذمہ داری اور بات چیت دکھا سکتا ہے۔ آپ نے کون سے کام کیے؟",
+      "helpGeneral": "آپ نے کیا کیا، کیا سیکھا اور آئندہ کیریئر میں کیا آزمانا چاہیں گے؟",
+      "ready": "آپ کی دلچسپی۔ آپ کا راستہ۔ آپ کا قدم۔",
+      "resultsTitle": "مستقبل ایک قدم سے شروع ہوتا ہے۔",
+      "summaryTitle": "آپ کے تجربے کا پہلا خاکہ۔",
+      "summaryDescription": "کیریئر گفتگو یا درخواست کا آغاز۔ اپنی مرضی سے درست کریں۔",
+      "noExperience": "میں کام کی طرف پہلے قدم اور اپنی مہارتیں جاننے میں مدد چاہتا ہوں۔",
+      "referralTitle": "کسی سے منصوبے پر بات کریں۔",
+      "referralDescription": "کیریئر مشیر یا اسکول کے رابطہ کار کو درخواست کا پیش منظر۔ کچھ نہیں بھیجا جاتا۔",
+      "referralButton": "کیریئر گفتگو کا پیش منظر",
+      "generalRequest": "کام کی طرف پہلے قدم میں مدد",
+      "youth": {
+        "gatewayLabel": "MBacc کے کون سے راستے دلچسپ ہیں؟",
+        "gatewayHint": "کوئی بھی منتخب کریں۔ آج ہی کیریئر طے کرنا ضروری نہیں۔",
+        "gatewayNames": [
+          "تعمیرات اور سبز معیشت",
+          "تخلیق، ثقافت اور کھیل",
+          "ڈیجیٹل اور ٹیکنالوجی",
+          "تعلیم اور ابتدائی بچپن",
+          "انجینئرنگ اور مینوفیکچرنگ",
+          "مالیات، کاروبار اور پیشہ ورانہ خدمات",
+          "صحت اور سماجی نگہداشت"
+        ],
+        "stageLabel": "آپ کس مرحلے پر ہیں؟",
+        "stages": [
+          "بتانا نہیں چاہتا",
+          "اسکول / GCSE",
+          "کالج / sixth form",
+          "اپرنٹس شپ / تربیت",
+          "اگلا قدم تلاش کر رہا ہوں"
+        ],
+        "gatewaysReview": "MBacc کی دلچسپیاں",
+        "stageReview": "موجودہ مرحلہ",
+        "gatewaySummary": "کیریئر راستے جو میں جاننا چاہتا ہوں: ",
+        "stageSummary": "میرا موجودہ مرحلہ: ",
+        "connectionTag": "MBACC × TEAM WIGAN",
+        "connectionTitle": "آپ کا خیال۔ ایک بڑے راستے سے جڑا ہوا۔",
+        "connectionText": "قابلِ رسائی فارم نوجوانوں کو MBacc کے سرکاری راستوں اور مقامی مواقع سے جوڑتا ہے۔",
+        "connectionLink": "MBacc کیا ہے؟ ↗",
+        "pathwayTitle": "MBacc کے ساتھ دلچسپی آگے بڑھائیں۔",
+        "pathwayText": "Beeline پر منتخب راستے دیکھیں۔ جوابات یہاں رہتے ہیں، MBacc یا GMACS کو نہیں بھیجے جاتے۔",
+        "pathwayDefault": "یقین نہیں؟ Beeline پر تمام راستے دیکھیں۔",
+        "pathwayButton": "Beeline دیکھیں ↗",
+        "profileNote": "یہ ذاتی مسودہ ہے، MBacc ایوارڈ کا ریکارڈ یا تصدیق شدہ قابلیت نہیں۔"
+      }
+    }
+  },
+  "gateways": [
+    {
+      "id": "construction",
+      "url": "https://gmacs.co.uk/beeline/construction-and-the-green-economy/",
+      "icon": "⌂"
+    },
+    {
+      "id": "creative",
+      "url": "https://gmacs.co.uk/beeline/creative-culture-and-sport/",
+      "icon": "✧"
+    },
+    {
+      "id": "digital",
+      "url": "https://gmacs.co.uk/beeline/digital-and-technology/",
+      "icon": "⌨"
+    },
+    {
+      "id": "education",
+      "url": "https://gmacs.co.uk/beeline/education-and-early-years/",
+      "icon": "✎"
+    },
+    {
+      "id": "engineering",
+      "url": "https://gmacs.co.uk/beeline/engineering-and-manufacturing/",
+      "icon": "⚙"
+    },
+    {
+      "id": "business",
+      "url": "https://gmacs.co.uk/beeline/financial-business-and-professional-services/",
+      "icon": "↗"
+    },
+    {
+      "id": "health",
+      "url": "https://gmacs.co.uk/beeline/health-and-social-care/",
+      "icon": "♡"
+    }
+  ]
 };
