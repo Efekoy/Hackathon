@@ -1,0 +1,5 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import worker from '../dist/server/index.js';
+test('built Worker serves the complete UI and local Wigan photograph',async()=>{for(const [path,type]of [['/','text/html'],['/app.js','javascript'],['/accessibility.js','javascript'],['/content.js','javascript'],['/assets/wigan-pier.jpg','image/jpeg']]){const result=await worker.fetch(new Request('https://demo.example'+path),{});assert.equal(result.status,200);assert.ok(result.headers.get('Content-Type').includes(type));assert.ok((await result.arrayBuffer()).byteLength>100);}});
+test('built Worker returns safe 404s, head responses and no-key language fallback',async()=>{assert.equal((await worker.fetch(new Request('https://demo.example/.env'),{})).status,404);const head=await worker.fetch(new Request('https://demo.example/',{method:'HEAD'}),{});assert.equal(await head.text(),'');const result=await worker.fetch(new Request('https://demo.example/api/languages'),{});assert.deepEqual(await result.json(),{configured:false,languages:[]});});
